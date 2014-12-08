@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" xmlns:intf="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns2="http://data.service.bc.crmadapter.adapter.um.asiainfo.com" xmlns:tns3="http://service.bc.crmadapter.adapter.um.asiainfo.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://service.bc.crmadapter.adapter.um.asiainfo.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com"/>
+   <import namespace="http://data.service.bc.crmadapter.adapter.um.asiainfo.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="Message">
+    <sequence>
+     <element name="RequestID" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://data.service.bc.crmadapter.adapter.um.asiainfo.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com"/>
+   <import namespace="http://service.bc.crmadapter.adapter.um.asiainfo.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="Request">
+    <complexContent>
+     <extension base="tns3:Message">
+      <sequence>
+       <element name="Msisdn" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="BundleAndPlanBalancesRequest">
+    <complexContent>
+     <extension base="tns2:Request">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="UpdateBundleRequest">
+    <complexContent>
+     <extension base="tns2:Request">
+      <sequence>
+       <element name="BpId" nillable="true" type="xsd:long"/>
+       <element name="ProfileId" nillable="true" type="xsd:long"/>
+       <element name="Purpose" nillable="true" type="xsd:string"/>
+       <element name="ReasonId" nillable="true" type="xsd:long"/>
+       <element name="SeqNo" nillable="true" type="xsd:long"/>
+       <element name="ServiceCode" nillable="true" type="xsd:long"/>
+       <element name="UnitMeasurement" nillable="true" type="xsd:long"/>
+       <element name="Value" nillable="true" type="xsd:double"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ContractServiceInfo">
+    <sequence>
+     <element name="CosPendingStatus" nillable="true" type="xsd:int"/>
+     <element name="InitResetDate" nillable="true" type="xsd:dateTime"/>
+     <element name="ServiceCode" nillable="true" type="xsd:long"/>
+     <element name="ServicePackageCode" nillable="true" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="ContractServiceListUpdateRequest">
+    <complexContent>
+     <extension base="tns2:Request">
+      <sequence>
+       <element name="ContractServices" nillable="true" type="impl:ArrayOf_tns2_ContractServiceInfo"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="BillingAddressAndContactRetrieveRequest">
+    <complexContent>
+     <extension base="tns2:Request">
+      <sequence>
+       <element name="CustCode" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="LimitedListRequest">
+    <complexContent>
+     <extension base="tns2:Request">
+      <sequence>
+       <element name="SearchLimit" nillable="true" type="xsd:int"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="Response">
+    <complexContent>
+     <extension base="tns3:Message">
+      <sequence>
+       <element name="Error" nillable="true" type="xsd:int"/>
+       <element name="ErrorMessage" nillable="true" type="xsd:string"/>
+       <element name="Status" nillable="true" type="xsd:int"/>
+       <element name="TransactionId" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="BillingCycleInfo">
+    <sequence>
+     <element name="BillingCycle" nillable="true" type="xsd:string"/>
+     <element name="BillingCycleDesc" nillable="true" type="xsd:string"/>
+     <element name="IntervalType" nillable="true" type="xsd:string"/>
+     <element name="Length" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="BillingCycleResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="BillingCycle" nillable="true" type="tns2:BillingCycleInfo"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="SubscriberTypeResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="BusinessUnit" nillable="true" type="xsd:string"/>
+       <element name="ContractType" nillable="true" type="xsd:string"/>
+       <element name="SubscriberType" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ContractDeviceResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="ImsiList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+       <element name="Puk" nillable="true" type="xsd:string"/>
+       <element name="Puk2" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="AccountStatusResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="PostpaidAccountStatusDesc" nillable="true" type="xsd:string"/>
+       <element name="PostpaidAccountStatusID" nillable="true" type="xsd:int"/>
+       <element name="PreLcExpiryDate" nillable="true" type="xsd:dateTime"/>
+       <element name="PreLcExpiryDateTime" nillable="true" type="xsd:dateTime"/>
+       <element name="PreLcStateDesc" nillable="true" type="xsd:string"/>
+       <element name="PreLcStateID" nillable="true" type="xsd:long"/>
+       <element name="PrepaidAccountStatusDesc" nillable="true" type="xsd:string"/>
+       <element name="PrepaidAccountStatusID" nillable="true" type="xsd:int"/>
+       <element name="PrepaidExpiryDate" nillable="true" type="xsd:dateTime"/>
+       <element name="PrepaidExpiryDateTime" nillable="true" type="xsd:dateTime"/>
+       <element name="ReasonCode" nillable="true" type="xsd:long"/>
+       <element name="ReasonDesc" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="BasicServiceDetail">
+    <sequence>
+     <element name="ServiceCode" nillable="true" type="xsd:long"/>
+     <element name="ServiceCoreInd" nillable="true" type="xsd:boolean"/>
+     <element name="ServiceDesc" nillable="true" type="xsd:string"/>
+     <element name="ServiceInd" nillable="true" type="xsd:string"/>
+     <element name="ServicePackageCode" nillable="true" type="xsd:long"/>
+     <element name="ServiceType" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ServiceDetail">
+    <complexContent>
+     <extension base="tns2:BasicServiceDetail">
+      <sequence>
+       <element name="serviceCode" nillable="true" type="xsd:long"/>
+       <element name="serviceCoreInd" nillable="true" type="xsd:boolean"/>
+       <element name="serviceDesc" nillable="true" type="xsd:string"/>
+       <element name="serviceInd" nillable="true" type="xsd:string"/>
+       <element name="servicePackageCode" nillable="true" type="xsd:long"/>
+       <element name="ServiceStatusCode" nillable="true" type="xsd:int"/>
+       <element name="ServiceStatusDesc" nillable="true" type="xsd:string"/>
+       <element name="serviceType" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ServiceListResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="ServiceDetail" nillable="true" type="impl:ArrayOf_tns2_ServiceDetail"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="Money">
+    <sequence>
+     <element name="Amount" nillable="true" type="xsd:double"/>
+     <element name="Currency" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Freebies">
+    <sequence>
+     <element name="RealCreditValue" nillable="true" type="tns2:Money"/>
+     <element name="ServiceCode" nillable="true" type="xsd:long"/>
+     <element name="ServiceDesc" nillable="true" type="xsd:string"/>
+     <element name="UnitMeasurement" nillable="true" type="xsd:long"/>
+     <element name="UnitMeasurementDesc" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="FreebiesListResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="Freebies" nillable="true" type="impl:ArrayOf_tns2_Freebies"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="UpdateBundleResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="AdjustmentRequestId" nillable="true" type="xsd:long"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="BundleAndPlanBalance">
+    <sequence>
+     <element name="Balance" nillable="true" type="xsd:double"/>
+     <element name="BpId" nillable="true" type="xsd:long"/>
+     <element name="Bundle" nillable="true" type="xsd:boolean"/>
+     <element name="BundleName" nillable="true" type="xsd:string"/>
+     <element name="BundleVersion" nillable="true" type="xsd:long"/>
+     <element name="EffectiveDate" nillable="true" type="xsd:dateTime"/>
+     <element name="ExpiryDate" nillable="true" type="xsd:dateTime"/>
+     <element name="ProfileId" nillable="true" type="xsd:long"/>
+     <element name="SeqNo" nillable="true" type="xsd:long"/>
+     <element name="ServiceCode" nillable="true" type="xsd:long"/>
+     <element name="UnitMeasurement" nillable="true" type="xsd:long"/>
+     <element name="UnitMeasurementDesc" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="BundleAndPlanBalancesResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="BundleAndPlanBalance" nillable="true" type="impl:ArrayOf_tns2_BundleAndPlanBalance"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="AddressInfo">
+    <sequence>
+     <element name="AddressFName" nillable="true" type="xsd:string"/>
+     <element name="AddressLName" nillable="true" type="xsd:string"/>
+     <element name="AddressName" nillable="true" type="xsd:string"/>
+     <element name="AddressNote1" nillable="true" type="xsd:string"/>
+     <element name="AddressNote2" nillable="true" type="xsd:string"/>
+     <element name="AddressNote3" nillable="true" type="xsd:string"/>
+     <element name="AddressSeqNo" nillable="true" type="xsd:long"/>
+     <element name="AddressStreet" nillable="true" type="xsd:string"/>
+     <element name="AddressStreetNo" nillable="true" type="xsd:string"/>
+     <element name="AdressIdNo" nillable="true" type="xsd:string"/>
+     <element name="City" nillable="true" type="xsd:string"/>
+     <element name="CountryCode" nillable="true" type="xsd:long"/>
+     <element name="CountryDesc" nillable="true" type="xsd:string"/>
+     <element name="EmailAddress" nillable="true" type="xsd:string"/>
+     <element name="FaxNo" nillable="true" type="xsd:string"/>
+     <element name="HomePhoneNo" nillable="true" type="xsd:string"/>
+     <element name="IdTypeCode" nillable="true" type="xsd:long"/>
+     <element name="IdTypeName" nillable="true" type="xsd:string"/>
+     <element name="LanguageCode" nillable="true" type="xsd:long"/>
+     <element name="LanguageDesc" nillable="true" type="xsd:string"/>
+     <element name="OffPhoneNo" nillable="true" type="xsd:string"/>
+     <element name="State" nillable="true" type="xsd:string"/>
+     <element name="TitleDesc" nillable="true" type="xsd:string"/>
+     <element name="TitleId" nillable="true" type="xsd:long"/>
+     <element name="Zipcode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ContractAddressResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="BillingAddress" nillable="true" type="tns2:AddressInfo"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="LastCallCost">
+    <sequence>
+     <element name="EffDiscountedAmount" nillable="true" type="tns2:Money"/>
+     <element name="LastCallCost" nillable="true" type="tns2:Money"/>
+    </sequence>
+   </complexType>
+   <complexType name="LastCallCostResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="LastCallCost" nillable="true" type="impl:ArrayOf_tns2_LastCallCost"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="AccountBalanceResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="PostpaidOutstandingBalance" nillable="true" type="tns2:Money"/>
+       <element name="PostpaidPreviousBalance" nillable="true" type="tns2:Money"/>
+       <element name="PostpaidUnbilledAmount" nillable="true" type="tns2:Money"/>
+       <element name="PrepaidBalance" nillable="true" type="tns2:Money"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ContractRateplanResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="RateplanCode" nillable="true" type="xsd:long"/>
+       <element name="RateplanDescription" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ContractRateplan">
+    <sequence>
+     <element name="RateplanCode" nillable="true" type="xsd:long"/>
+     <element name="RateplanDesc" nillable="true" type="xsd:string"/>
+     <element name="RateplanIndicator" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RateplanListResponse">
+    <complexContent>
+     <extension base="tns2:Response">
+      <sequence>
+       <element name="ContractRatePlan" nillable="true" type="impl:ArrayOf_tns2_ContractRateplan"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://service.bc.crmadapter.adapter.um.asiainfo.com"/>
+   <import namespace="http://data.service.bc.crmadapter.adapter.um.asiainfo.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_tns2_ContractServiceInfo">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns2:ContractServiceInfo[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_xsd_string">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_ServiceDetail">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns2:ServiceDetail[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_Freebies">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns2:Freebies[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_BundleAndPlanBalance">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns2:BundleAndPlanBalance[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_LastCallCost">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns2:LastCallCost[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns2_ContractRateplan">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns2:ContractRateplan[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getBillingAddressAndContactRequest">
+
+      <wsdl:part name="request" type="tns2:BillingAddressAndContactRetrieveRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateContractServiceListResponse">
+
+      <wsdl:part name="updateContractServiceListReturn" type="tns2:Response"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractStatusResponse">
+
+      <wsdl:part name="getContractStatusReturn" type="tns2:AccountStatusResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateBundleBalanceResponse">
+
+      <wsdl:part name="updateBundleBalanceReturn" type="tns2:UpdateBundleResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractRateplanResponse">
+
+      <wsdl:part name="getContractRateplanReturn" type="tns2:ContractRateplanResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="subscribeMRBTServiceRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSubscriberProfileRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRateplanListRequest">
+
+      <wsdl:part name="request" type="tns3:Message"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRateplanListResponse">
+
+      <wsdl:part name="getRateplanListReturn" type="tns2:RateplanListResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastCallCostListResponse">
+
+      <wsdl:part name="getLastCallCostListReturn" type="tns2:LastCallCostResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractStatusRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSubscriberProfileResponse">
+
+      <wsdl:part name="getSubscriberProfileReturn" type="tns2:SubscriberTypeResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractBillingCycleRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractDeviceRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractServiceListResponse">
+
+      <wsdl:part name="getContractServiceListReturn" type="tns2:ServiceListResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractDeviceResponse">
+
+      <wsdl:part name="getContractDeviceReturn" type="tns2:ContractDeviceResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="unsubscribeMRBTServiceRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateContractServiceListRequest">
+
+      <wsdl:part name="request" type="tns2:ContractServiceListUpdateRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractBillingCycleResponse">
+
+      <wsdl:part name="getContractBillingCycleReturn" type="tns2:BillingCycleResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="subscribeMRBTServiceResponse">
+
+      <wsdl:part name="subscribeMRBTServiceReturn" type="tns2:Response"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBillingAddressAndContactResponse">
+
+      <wsdl:part name="getBillingAddressAndContactReturn" type="tns2:ContractAddressResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractRateplanRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBundleAndPlanBalancesResponse">
+
+      <wsdl:part name="getBundleAndPlanBalancesReturn" type="tns2:BundleAndPlanBalancesResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBundleAndPlanBalancesRequest">
+
+      <wsdl:part name="request" type="tns2:BundleAndPlanBalancesRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBalanceRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastCallCostListRequest">
+
+      <wsdl:part name="request" type="tns2:LimitedListRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="unsubscribeMRBTServiceResponse">
+
+      <wsdl:part name="unsubscribeMRBTServiceReturn" type="tns2:Response"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFreebiesListResponse">
+
+      <wsdl:part name="getFreebiesListReturn" type="tns2:FreebiesListResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContractServiceListRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateBundleBalanceRequest">
+
+      <wsdl:part name="request" type="tns2:UpdateBundleRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBalanceResponse">
+
+      <wsdl:part name="getBalanceReturn" type="tns2:AccountBalanceResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFreebiesListRequest">
+
+      <wsdl:part name="request" type="tns2:Request"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="BillingConnector">
+
+      <wsdl:operation name="getContractBillingCycle" parameterOrder="request">
+
+         <wsdl:input message="impl:getContractBillingCycleRequest" name="getContractBillingCycleRequest"/>
+
+         <wsdl:output message="impl:getContractBillingCycleResponse" name="getContractBillingCycleResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSubscriberProfile" parameterOrder="request">
+
+         <wsdl:input message="impl:getSubscriberProfileRequest" name="getSubscriberProfileRequest"/>
+
+         <wsdl:output message="impl:getSubscriberProfileResponse" name="getSubscriberProfileResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractDevice" parameterOrder="request">
+
+         <wsdl:input message="impl:getContractDeviceRequest" name="getContractDeviceRequest"/>
+
+         <wsdl:output message="impl:getContractDeviceResponse" name="getContractDeviceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractStatus" parameterOrder="request">
+
+         <wsdl:input message="impl:getContractStatusRequest" name="getContractStatusRequest"/>
+
+         <wsdl:output message="impl:getContractStatusResponse" name="getContractStatusResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateContractServiceList" parameterOrder="request">
+
+         <wsdl:input message="impl:updateContractServiceListRequest" name="updateContractServiceListRequest"/>
+
+         <wsdl:output message="impl:updateContractServiceListResponse" name="updateContractServiceListResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractServiceList" parameterOrder="request">
+
+         <wsdl:input message="impl:getContractServiceListRequest" name="getContractServiceListRequest"/>
+
+         <wsdl:output message="impl:getContractServiceListResponse" name="getContractServiceListResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBillingAddressAndContact" parameterOrder="request">
+
+         <wsdl:input message="impl:getBillingAddressAndContactRequest" name="getBillingAddressAndContactRequest"/>
+
+         <wsdl:output message="impl:getBillingAddressAndContactResponse" name="getBillingAddressAndContactResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRateplanList" parameterOrder="request">
+
+         <wsdl:input message="impl:getRateplanListRequest" name="getRateplanListRequest"/>
+
+         <wsdl:output message="impl:getRateplanListResponse" name="getRateplanListResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateBundleBalance" parameterOrder="request">
+
+         <wsdl:input message="impl:updateBundleBalanceRequest" name="updateBundleBalanceRequest"/>
+
+         <wsdl:output message="impl:updateBundleBalanceResponse" name="updateBundleBalanceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBalance" parameterOrder="request">
+
+         <wsdl:input message="impl:getBalanceRequest" name="getBalanceRequest"/>
+
+         <wsdl:output message="impl:getBalanceResponse" name="getBalanceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastCallCostList" parameterOrder="request">
+
+         <wsdl:input message="impl:getLastCallCostListRequest" name="getLastCallCostListRequest"/>
+
+         <wsdl:output message="impl:getLastCallCostListResponse" name="getLastCallCostListResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractRateplan" parameterOrder="request">
+
+         <wsdl:input message="impl:getContractRateplanRequest" name="getContractRateplanRequest"/>
+
+         <wsdl:output message="impl:getContractRateplanResponse" name="getContractRateplanResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBundleAndPlanBalances" parameterOrder="request">
+
+         <wsdl:input message="impl:getBundleAndPlanBalancesRequest" name="getBundleAndPlanBalancesRequest"/>
+
+         <wsdl:output message="impl:getBundleAndPlanBalancesResponse" name="getBundleAndPlanBalancesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFreebiesList" parameterOrder="request">
+
+         <wsdl:input message="impl:getFreebiesListRequest" name="getFreebiesListRequest"/>
+
+         <wsdl:output message="impl:getFreebiesListResponse" name="getFreebiesListResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="unsubscribeMRBTService" parameterOrder="request">
+
+         <wsdl:input message="impl:unsubscribeMRBTServiceRequest" name="unsubscribeMRBTServiceRequest"/>
+
+         <wsdl:output message="impl:unsubscribeMRBTServiceResponse" name="unsubscribeMRBTServiceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subscribeMRBTService" parameterOrder="request">
+
+         <wsdl:input message="impl:subscribeMRBTServiceRequest" name="subscribeMRBTServiceRequest"/>
+
+         <wsdl:output message="impl:subscribeMRBTServiceResponse" name="subscribeMRBTServiceResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="BillingConnectorServiceSoapBinding" type="impl:BillingConnector">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getContractBillingCycle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getContractBillingCycleRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getContractBillingCycleResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSubscriberProfile">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSubscriberProfileRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSubscriberProfileResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractDevice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getContractDeviceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getContractDeviceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractStatus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getContractStatusRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getContractStatusResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateContractServiceList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateContractServiceListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateContractServiceListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractServiceList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getContractServiceListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getContractServiceListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBillingAddressAndContact">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBillingAddressAndContactRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBillingAddressAndContactResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRateplanList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRateplanListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRateplanListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateBundleBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateBundleBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateBundleBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastCallCostList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLastCallCostListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLastCallCostListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContractRateplan">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getContractRateplanRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getContractRateplanResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBundleAndPlanBalances">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBundleAndPlanBalancesRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBundleAndPlanBalancesResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFreebiesList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFreebiesListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFreebiesListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="unsubscribeMRBTService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="unsubscribeMRBTServiceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="unsubscribeMRBTServiceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subscribeMRBTService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="subscribeMRBTServiceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="subscribeMRBTServiceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://itf.service.bc.crmadapter.adapter.um.asiainfo.com" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="BillingConnectorService">
+
+      <wsdl:port binding="impl:BillingConnectorServiceSoapBinding" name="BillingConnectorService">
+
+         <wsdlsoap:address location="http://localhost:8001/services/BillingConnectorService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,22 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soap:Body>
+		<ns1:QueryUserResponse xmlns:ns1="vms">
+			<ns1:out>
+				<IDNumber xmlns="http://mail.dto.op.web.ngmail.zte.com">133123123123123</IDNumber>
+				<MWNDest xmlns="http://mail.dto.op.web.ngmail.zte.com">33888833</MWNDest>
+				<MWNType xmlns="http://mail.dto.op.web.ngmail.zte.com">1</MWNType>
+				<email xmlns="http://mail.dto.op.web.ngmail.zte.com"></email>
+				<entryAuthen xmlns="http://mail.dto.op.web.ngmail.zte.com">1</entryAuthen>
+				<language xmlns="http://mail.dto.op.web.ngmail.zte.com">1</language>
+				<messageNotify xmlns="http://mail.dto.op.web.ngmail.zte.com">110</messageNotify>
+				<password xmlns="http://mail.dto.op.web.ngmail.zte.com">8888</password>
+				<resultcode xmlns="http://mail.dto.op.web.ngmail.zte.com">0</resultcode>
+				<serviceClass xmlns="http://mail.dto.op.web.ngmail.zte.com">1</serviceClass>
+				<userName xmlns="http://mail.dto.op.web.ngmail.zte.com">test</userName>
+				<userStatus xmlns="http://mail.dto.op.web.ngmail.zte.com">1</userStatus>
+				<zipCode xmlns="http://mail.dto.op.web.ngmail.zte.com">112332</zipCode>
+			</ns1:out>
+		</ns1:QueryUserResponse>
+	</soap:Body>
+</soap:Envelope>

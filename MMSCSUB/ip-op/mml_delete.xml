@@ -1,0 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<mml>
+	<RequestData>
+		<Operation>Delete</Operation>
+		<Msisdn>601111580901</Msisdn>
+		<transactionId>123</transactionId>
+	</RequestData>
+</mml>

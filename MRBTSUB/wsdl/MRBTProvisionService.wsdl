@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.mrbt.genico.ngc.com.my" xmlns:tns="http://ws.mrbt.genico.ngc.com.my" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.mrbt.genico.ngc.com.my">
+<xsd:element name="updateDedication">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in7" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="updateDedicationResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:complexType name="ProvisionFaultDetail">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="errorKey" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="errorParams" nillable="true" type="tns:ArrayOfString"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfString">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="WSProvisionException" type="tns:ProvisionFaultDetail"/>
+<xsd:element name="suspendSubscriber">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="suspendSubscriberResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="removeSpecialOccasion">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="removeSpecialOccasionResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="addDedication">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="addDedicationResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="getMusicBoxItemCount">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="getMusicBoxItemCountResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="removeDedication">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="removeDedicationResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="updateSubscriberLanguage">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="updateSubscriberLanguageResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="getTimeBasedItemCount">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="getTimeBasedItemCountResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="updateMusicBox">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="updateMusicBoxResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="updateTimeBased">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in7" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in8" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="updateTimeBasedResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="addSpecialOccasion">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in7" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="addSpecialOccasionResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="activateSubscriber">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="activateSubscriberResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="addTimeBased">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in7" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="addTimeBasedResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="deactivateSubscriber">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="deactivateSubscriberResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="addMusicLibrary">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="addMusicLibraryResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="updateSpecialOccasion">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in7" type="xsd:int"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in8" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="updateSpecialOccasionResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="removeMusicBox">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="removeMusicBoxResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="getSpecialOccasionItemCount">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="getSpecialOccasionItemCountResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getDedicationItemCount">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="getDedicationItemCountResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="reactivateSubscriber">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="reactivateSubscriberResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="removeTimeBased">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="removeTimeBasedResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="addMusicBox">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:long"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="addMusicBoxResponse">
+<xsd:complexType/>
+</xsd:element>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="updateTimeBasedRequest">
+    <wsdl:part name="parameters" element="tns:updateTimeBased"/>
+  </wsdl:message>
+  <wsdl:message name="addSpecialOccasionResponse">
+    <wsdl:part name="parameters" element="tns:addSpecialOccasionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getSpecialOccasionItemCountRequest">
+    <wsdl:part name="parameters" element="tns:getSpecialOccasionItemCount"/>
+  </wsdl:message>
+  <wsdl:message name="getMusicBoxItemCountRequest">
+    <wsdl:part name="parameters" element="tns:getMusicBoxItemCount"/>
+  </wsdl:message>
+  <wsdl:message name="deactivateSubscriberRequest">
+    <wsdl:part name="parameters" element="tns:deactivateSubscriber"/>
+  </wsdl:message>
+  <wsdl:message name="WSProvisionException">
+    <wsdl:part name="WSProvisionException" element="tns:WSProvisionException"/>
+  </wsdl:message>
+  <wsdl:message name="addMusicLibraryRequest">
+    <wsdl:part name="parameters" element="tns:addMusicLibrary"/>
+  </wsdl:message>
+  <wsdl:message name="updateDedicationRequest">
+    <wsdl:part name="parameters" element="tns:updateDedication"/>
+  </wsdl:message>
+  <wsdl:message name="activateSubscriberRequest">
+    <wsdl:part name="parameters" element="tns:activateSubscriber"/>
+  </wsdl:message>
+  <wsdl:message name="updateMusicBoxRequest">
+    <wsdl:part name="parameters" element="tns:updateMusicBox"/>
+  </wsdl:message>
+  <wsdl:message name="suspendSubscriberRequest">
+    <wsdl:part name="parameters" element="tns:suspendSubscriber"/>
+  </wsdl:message>
+  <wsdl:message name="removeDedicationResponse">
+    <wsdl:part name="parameters" element="tns:removeDedicationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateSubscriberLanguageRequest">
+    <wsdl:part name="parameters" element="tns:updateSubscriberLanguage"/>
+  </wsdl:message>
+  <wsdl:message name="addDedicationRequest">
+    <wsdl:part name="parameters" element="tns:addDedication"/>
+  </wsdl:message>
+  <wsdl:message name="addTimeBasedRequest">
+    <wsdl:part name="parameters" element="tns:addTimeBased"/>
+  </wsdl:message>
+  <wsdl:message name="deactivateSubscriberResponse">
+    <wsdl:part name="parameters" element="tns:deactivateSubscriberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getSpecialOccasionItemCountResponse">
+    <wsdl:part name="parameters" element="tns:getSpecialOccasionItemCountResponse"/>
+  </wsdl:message>
+  <wsdl:message name="removeMusicBoxRequest">
+    <wsdl:part name="parameters" element="tns:removeMusicBox"/>
+  </wsdl:message>
+  <wsdl:message name="removeMusicBoxResponse">
+    <wsdl:part name="parameters" element="tns:removeMusicBoxResponse"/>
+  </wsdl:message>
+  <wsdl:message name="suspendSubscriberResponse">
+    <wsdl:part name="parameters" element="tns:suspendSubscriberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="removeTimeBasedRequest">
+    <wsdl:part name="parameters" element="tns:removeTimeBased"/>
+  </wsdl:message>
+  <wsdl:message name="activateSubscriberResponse">
+    <wsdl:part name="parameters" element="tns:activateSubscriberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getMusicBoxItemCountResponse">
+    <wsdl:part name="parameters" element="tns:getMusicBoxItemCountResponse"/>
+  </wsdl:message>
+  <wsdl:message name="removeDedicationRequest">
+    <wsdl:part name="parameters" element="tns:removeDedication"/>
+  </wsdl:message>
+  <wsdl:message name="addMusicLibraryResponse">
+    <wsdl:part name="parameters" element="tns:addMusicLibraryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="removeSpecialOccasionRequest">
+    <wsdl:part name="parameters" element="tns:removeSpecialOccasion"/>
+  </wsdl:message>
+  <wsdl:message name="getDedicationItemCountResponse">
+    <wsdl:part name="parameters" element="tns:getDedicationItemCountResponse"/>
+  </wsdl:message>
+  <wsdl:message name="addDedicationResponse">
+    <wsdl:part name="parameters" element="tns:addDedicationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getTimeBasedItemCountResponse">
+    <wsdl:part name="parameters" element="tns:getTimeBasedItemCountResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getDedicationItemCountRequest">
+    <wsdl:part name="parameters" element="tns:getDedicationItemCount"/>
+  </wsdl:message>
+  <wsdl:message name="addMusicBoxResponse">
+    <wsdl:part name="parameters" element="tns:addMusicBoxResponse"/>
+  </wsdl:message>
+  <wsdl:message name="reactivateSubscriberRequest">
+    <wsdl:part name="parameters" element="tns:reactivateSubscriber"/>
+  </wsdl:message>
+  <wsdl:message name="updateTimeBasedResponse">
+    <wsdl:part name="parameters" element="tns:updateTimeBasedResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateMusicBoxResponse">
+    <wsdl:part name="parameters" element="tns:updateMusicBoxResponse"/>
+  </wsdl:message>
+  <wsdl:message name="removeTimeBasedResponse">
+    <wsdl:part name="parameters" element="tns:removeTimeBasedResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateSpecialOccasionRequest">
+    <wsdl:part name="parameters" element="tns:updateSpecialOccasion"/>
+  </wsdl:message>
+  <wsdl:message name="addTimeBasedResponse">
+    <wsdl:part name="parameters" element="tns:addTimeBasedResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getTimeBasedItemCountRequest">
+    <wsdl:part name="parameters" element="tns:getTimeBasedItemCount"/>
+  </wsdl:message>
+  <wsdl:message name="addMusicBoxRequest">
+    <wsdl:part name="parameters" element="tns:addMusicBox"/>
+  </wsdl:message>
+  <wsdl:message name="reactivateSubscriberResponse">
+    <wsdl:part name="parameters" element="tns:reactivateSubscriberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="addSpecialOccasionRequest">
+    <wsdl:part name="parameters" element="tns:addSpecialOccasion"/>
+  </wsdl:message>
+  <wsdl:message name="updateSpecialOccasionResponse">
+    <wsdl:part name="parameters" element="tns:updateSpecialOccasionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateDedicationResponse">
+    <wsdl:part name="parameters" element="tns:updateDedicationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateSubscriberLanguageResponse">
+    <wsdl:part name="parameters" element="tns:updateSubscriberLanguageResponse"/>
+  </wsdl:message>
+  <wsdl:message name="removeSpecialOccasionResponse">
+    <wsdl:part name="parameters" element="tns:removeSpecialOccasionResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="MRBTProvisionService">
+    <wsdl:operation name="updateDedication">
+      <wsdl:input name="updateDedicationRequest" message="tns:updateDedicationRequest"/>
+      <wsdl:output name="updateDedicationResponse" message="tns:updateDedicationResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="suspendSubscriber">
+      <wsdl:input name="suspendSubscriberRequest" message="tns:suspendSubscriberRequest"/>
+      <wsdl:output name="suspendSubscriberResponse" message="tns:suspendSubscriberResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeSpecialOccasion">
+      <wsdl:input name="removeSpecialOccasionRequest" message="tns:removeSpecialOccasionRequest"/>
+      <wsdl:output name="removeSpecialOccasionResponse" message="tns:removeSpecialOccasionResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="addDedication">
+      <wsdl:input name="addDedicationRequest" message="tns:addDedicationRequest"/>
+      <wsdl:output name="addDedicationResponse" message="tns:addDedicationResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getMusicBoxItemCount">
+      <wsdl:input name="getMusicBoxItemCountRequest" message="tns:getMusicBoxItemCountRequest"/>
+      <wsdl:output name="getMusicBoxItemCountResponse" message="tns:getMusicBoxItemCountResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeDedication">
+      <wsdl:input name="removeDedicationRequest" message="tns:removeDedicationRequest"/>
+      <wsdl:output name="removeDedicationResponse" message="tns:removeDedicationResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateSubscriberLanguage">
+      <wsdl:input name="updateSubscriberLanguageRequest" message="tns:updateSubscriberLanguageRequest"/>
+      <wsdl:output name="updateSubscriberLanguageResponse" message="tns:updateSubscriberLanguageResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getTimeBasedItemCount">
+      <wsdl:input name="getTimeBasedItemCountRequest" message="tns:getTimeBasedItemCountRequest"/>
+      <wsdl:output name="getTimeBasedItemCountResponse" message="tns:getTimeBasedItemCountResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateMusicBox">
+      <wsdl:input name="updateMusicBoxRequest" message="tns:updateMusicBoxRequest"/>
+      <wsdl:output name="updateMusicBoxResponse" message="tns:updateMusicBoxResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateTimeBased">
+      <wsdl:input name="updateTimeBasedRequest" message="tns:updateTimeBasedRequest"/>
+      <wsdl:output name="updateTimeBasedResponse" message="tns:updateTimeBasedResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="addSpecialOccasion">
+      <wsdl:input name="addSpecialOccasionRequest" message="tns:addSpecialOccasionRequest"/>
+      <wsdl:output name="addSpecialOccasionResponse" message="tns:addSpecialOccasionResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="activateSubscriber">
+      <wsdl:input name="activateSubscriberRequest" message="tns:activateSubscriberRequest"/>
+      <wsdl:output name="activateSubscriberResponse" message="tns:activateSubscriberResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="addTimeBased">
+      <wsdl:input name="addTimeBasedRequest" message="tns:addTimeBasedRequest"/>
+      <wsdl:output name="addTimeBasedResponse" message="tns:addTimeBasedResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deactivateSubscriber">
+      <wsdl:input name="deactivateSubscriberRequest" message="tns:deactivateSubscriberRequest"/>
+      <wsdl:output name="deactivateSubscriberResponse" message="tns:deactivateSubscriberResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="addMusicLibrary">
+      <wsdl:input name="addMusicLibraryRequest" message="tns:addMusicLibraryRequest"/>
+      <wsdl:output name="addMusicLibraryResponse" message="tns:addMusicLibraryResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateSpecialOccasion">
+      <wsdl:input name="updateSpecialOccasionRequest" message="tns:updateSpecialOccasionRequest"/>
+      <wsdl:output name="updateSpecialOccasionResponse" message="tns:updateSpecialOccasionResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeMusicBox">
+      <wsdl:input name="removeMusicBoxRequest" message="tns:removeMusicBoxRequest"/>
+      <wsdl:output name="removeMusicBoxResponse" message="tns:removeMusicBoxResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialOccasionItemCount">
+      <wsdl:input name="getSpecialOccasionItemCountRequest" message="tns:getSpecialOccasionItemCountRequest"/>
+      <wsdl:output name="getSpecialOccasionItemCountResponse" message="tns:getSpecialOccasionItemCountResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getDedicationItemCount">
+      <wsdl:input name="getDedicationItemCountRequest" message="tns:getDedicationItemCountRequest"/>
+      <wsdl:output name="getDedicationItemCountResponse" message="tns:getDedicationItemCountResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="reactivateSubscriber">
+      <wsdl:input name="reactivateSubscriberRequest" message="tns:reactivateSubscriberRequest"/>
+      <wsdl:output name="reactivateSubscriberResponse" message="tns:reactivateSubscriberResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeTimeBased">
+      <wsdl:input name="removeTimeBasedRequest" message="tns:removeTimeBasedRequest"/>
+      <wsdl:output name="removeTimeBasedResponse" message="tns:removeTimeBasedResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+    <wsdl:operation name="addMusicBox">
+      <wsdl:input name="addMusicBoxRequest" message="tns:addMusicBoxRequest"/>
+      <wsdl:output name="addMusicBoxResponse" message="tns:addMusicBoxResponse"/>
+      <wsdl:fault name="WSProvisionException" message="tns:WSProvisionException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MRBTProvisionServiceHttpBinding" type="tns:MRBTProvisionService">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateDedication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updateDedicationRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateDedicationResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="suspendSubscriber">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="suspendSubscriberRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="suspendSubscriberResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeSpecialOccasion">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="removeSpecialOccasionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeSpecialOccasionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addDedication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="addDedicationRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addDedicationResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMusicBoxItemCount">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getMusicBoxItemCountRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMusicBoxItemCountResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeDedication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="removeDedicationRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeDedicationResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateSubscriberLanguage">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updateSubscriberLanguageRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateSubscriberLanguageResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTimeBasedItemCount">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getTimeBasedItemCountRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTimeBasedItemCountResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMusicBox">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updateMusicBoxRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateMusicBoxResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateTimeBased">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updateTimeBasedRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateTimeBasedResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addSpecialOccasion">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="addSpecialOccasionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addSpecialOccasionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateSubscriber">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="activateSubscriberRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="activateSubscriberResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addTimeBased">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="addTimeBasedRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addTimeBasedResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deactivateSubscriber">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="deactivateSubscriberRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deactivateSubscriberResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addMusicLibrary">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="addMusicLibraryRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addMusicLibraryResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateSpecialOccasion">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updateSpecialOccasionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateSpecialOccasionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeMusicBox">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="removeMusicBoxRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeMusicBoxResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialOccasionItemCount">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getSpecialOccasionItemCountRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSpecialOccasionItemCountResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDedicationItemCount">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getDedicationItemCountRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDedicationItemCountResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reactivateSubscriber">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="reactivateSubscriberRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reactivateSubscriberResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeTimeBased">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="removeTimeBasedRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeTimeBasedResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addMusicBox">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="addMusicBoxRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addMusicBoxResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSProvisionException">
+        <wsdlsoap:fault name="WSProvisionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MRBTProvisionService">
+    <wsdl:port name="MRBTProvisionServiceHttpPort" binding="tns:MRBTProvisionServiceHttpBinding">
+      <wsdlsoap:address location="http://192.168.99.69:8080/genico-mrbt-ws/MRBTProvisionService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoa
+p.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<CreateUserReqt xmlns="vms">
+			<BoxNumber>13345678920</BoxNumber>
+			<OperID>admin</OperID>
+			<OperPwd>
+				admin
+			</OperPwd>
+				<ServiceClass>1</ServiceClass>
+				<Language>1</Language>
+				<Password>8888</Password>
+				<EntryAuthen>1</EntryAuthen>
+				<MessageNotify>
+					110
+				</MessageNotify>
+					<UserName>test</UserName>
+					<Email>hh@tt.com</Email>
+					<ZipCode>112332</ZipCode>
+					<IDNumber>13312312312312
+						3</IDNumber>
+					<MWNType>1</MWNType>
+					<MWNDest>33888833</MWNDest>
+					<TerminalType>1</TerminalType>
+		</CreateUserReqt>
+	</soapenv:Body>
+</soapenv:Envelope>

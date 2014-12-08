@@ -1,0 +1,67 @@
+# **********************************************************************
+#             File : component.nfo
+#        Author(s) : qmiwang
+#          Created : 2007-5-25
+#
+#
+# Copyright (c) 2000 Telefonaktiebolaget LM Ericsson, Sweden.
+# All rights reserved.
+# The Copyright to the computer program(s) herein is the property of
+# Telefonaktiebolaget LM Ericsson, Sweden.
+# The program(s) may be used and/or copied with the written permission
+# from Telefonaktiebolaget LM Ericsson or in accordance with the terms
+# and conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+#
+# DESCRIPTION
+#
+#
+# VERSION
+#  $$Id: component.nfo,v 1.1 2000/08/25 14:26:24 epkboli Exp $$
+#
+# **********************************************************************
+#
+
+
+### Component information ###
+Product:       FSC
+Name:          LpDemoJavalink
+Version:       1.0
+Build:         0
+
+
+Class:         DemoJavalink
+ContainerFile: PluginContainer
+CXC:           ?
+
+### Dependencies ###
+# Standard 3rd party components for development only
+Devdepend: 3rd, Java, 1.6.0_15, 0
+Devdepend: 3rd, CXX, 5.10, 0
+Devdepend: 3rd, Purify, 7.0, 0
+Devdepend: 3rd, Quantify, 7.0, 0
+Devdepend: 3rd, Purecov, 7.0, 0
+Devdepend: 3rd, Rogue, 10u1, 0
+Devdepend: 3rd, Visibroker, 8.0.0, 0
+Devdepend: 3rd, PCCTS, 1.33_Solaris10_32bit, 0
+Devdepend: 3rd, Ant,     1.6.5, 0
+
+# 3rd party components for both development and run-time
+
+# Other components
+Depend:  FDS, General, 3.0, 0
+Depend:  FDS, Core, 3.0, 0
+Depend:  FSC, LinkManager, 2.0, 0
+Depend:  FSC, LpJavaLink, 1.0, 0
+
+# **********************************************************************
+# REVISION HISTORY
+#
+#  $$Log: component.nfo,v $$
+#  Revision 1.1  2000/08/25 14:26:24  epkboli
+#  First revision.
+#
+# 
+#
+# **********************************************************************

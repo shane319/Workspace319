@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoa
+p.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<activateSubscriber xmlns="http://ws.mrbt.genico.ngc.com.my">
+			<in0>5040</in0>
+			<in1>1</in1>
+			<in2>TR1110000202
+				020</in2>
+			<in3>60182345768</in3>
+		</activateSubscriber>
+	</soapenv:Body>
+</soapenv:Envelope>

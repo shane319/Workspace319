@@ -1,0 +1,828 @@
+2013-12-06 11:51:38,639  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:41 - DemoJavalink()
+2013-12-06 11:51:38,677  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:54 - setConfiguration:
+2013-12-06 11:51:38,679  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:57 - Param:0:http://E72C4138049AD9:8088/mockUmobilePortalServiceSoapBinding
+2013-12-06 11:51:38,680  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:57 - Param:1:IatPrtal
+2013-12-06 11:51:38,684  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:57 - Param:2:IatPrtal
+2013-12-06 11:51:38,686  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:69 - connect()
+2013-12-06 11:51:38,688  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:79 - receive mml:
+<?xml version="1.0" encoding="UTF-8"?>
+<mml>
+	<RequestData>
+		<Operation>AddNewPortalUser</Operation>
+		<RequestId>334433</RequestId>
+		<Msisdn>60112000001</Msisdn>
+	</RequestData>
+</mml>
+2013-12-06 11:51:39,047 DEBUG org.apache.axis.description.OperationDesc:265 - @38dda25b added parameter >name:       {http://www.u.com.my/}request
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {java:com.ericsson.umobileportal.wsserver.ws.data}Request
+javaType:   class data.ws.wsserver.umobileportal.ericsson.com.Request
+inHeader:   false
+outHeader:  false
+@5ece2187<total parameters:1
+2013-12-06 11:51:39,049 DEBUG org.apache.axis.description.OperationDesc:173 - @38dda25bsetReturnType({java:com.ericsson.umobileportal.wsserver.ws.data}Response)
+2013-12-06 11:51:39,069 DEBUG org.apache.axis.description.OperationDesc:265 - @464c4975 added parameter >name:       {http://www.u.com.my/}request
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {java:com.ericsson.umobileportal.wsserver.ws.data}Request
+javaType:   class data.ws.wsserver.umobileportal.ericsson.com.Request
+inHeader:   false
+outHeader:  false
+@3a6ac461<total parameters:1
+2013-12-06 11:51:39,071 DEBUG org.apache.axis.description.OperationDesc:173 - @464c4975setReturnType({java:com.ericsson.umobileportal.wsserver.ws.data}Response)
+2013-12-06 11:51:39,072 DEBUG org.apache.axis.description.OperationDesc:265 - @3782da3d added parameter >name:       {http://www.u.com.my/}request
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {java:com.ericsson.umobileportal.wsserver.ws.data}Request
+javaType:   class data.ws.wsserver.umobileportal.ericsson.com.Request
+inHeader:   false
+outHeader:  false
+@6fc5f743<total parameters:1
+2013-12-06 11:51:39,073 DEBUG org.apache.axis.description.OperationDesc:173 - @3782da3dsetReturnType({java:com.ericsson.umobileportal.wsserver.ws.data}Response)
+2013-12-06 11:51:39,074 DEBUG org.apache.axis.description.OperationDesc:265 - @2dec8909 added parameter >name:       {http://www.u.com.my/}request
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {java:com.ericsson.umobileportal.wsserver.ws.data}Request
+javaType:   class data.ws.wsserver.umobileportal.ericsson.com.Request
+inHeader:   false
+outHeader:  false
+@418c56d<total parameters:1
+2013-12-06 11:51:39,075 DEBUG org.apache.axis.description.OperationDesc:173 - @2dec8909setReturnType({java:com.ericsson.umobileportal.wsserver.ws.data}Response)
+2013-12-06 11:51:39,078 DEBUG org.apache.axis.description.OperationDesc:265 - @51b48197 added parameter >name:       {http://www.u.com.my/}request
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {java:com.ericsson.umobileportal.wsserver.ws.data}QueryUserProfileRequest
+javaType:   class data.ws.wsserver.umobileportal.ericsson.com.QueryUserProfileRequest
+inHeader:   false
+outHeader:  false
+@21a80a69<total parameters:1
+2013-12-06 11:51:39,079 DEBUG org.apache.axis.description.OperationDesc:173 - @51b48197setReturnType({java:com.ericsson.umobileportal.wsserver.ws.data}QueryUserProfileResponse)
+2013-12-06 11:51:39,123 DEBUG org.apache.axis.i18n.ProjectResourceBundle:264 - getBundle(org.apache.axis,org.apache.axis.i18n,resource,null,...)
+2013-12-06 11:51:39,163 DEBUG org.apache.axis.i18n.ProjectResourceBundle$Context:423 - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale en_US
+2013-12-06 11:51:39,165 DEBUG org.apache.axis.i18n.ProjectResourceBundle:318 - Created org.apache.axis.i18n.resource, linked to parent null
+2013-12-06 11:51:39,167 DEBUG org.apache.axis.i18n.ProjectResourceBundle:264 - getBundle(org.apache.axis,org.apache.axis.utils,resource,null,...)
+2013-12-06 11:51:39,170 DEBUG org.apache.axis.i18n.ProjectResourceBundle$Context:423 - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.utils.resource, locale en_US
+2013-12-06 11:51:39,171 DEBUG org.apache.axis.i18n.ProjectResourceBundle$Context:423 - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale en_US
+2013-12-06 11:51:39,173 DEBUG org.apache.axis.i18n.ProjectResourceBundle:328 - Root package not found, cross link to org.apache.axis.i18n.resource
+2013-12-06 11:51:39,174 DEBUG org.apache.axis.i18n.ProjectResourceBundle:328 - Root package not found, cross link to org.apache.axis.i18n.resource
+2013-12-06 11:51:39,175 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(engineConfigLoadFactory)
+2013-12-06 11:51:39,178 DEBUG org.apache.axis.configuration.EngineConfigurationFactoryFinder:206 - Factory org.apache.axis.configuration.EngineConfigurationFactoryServlet Ignored: unable to load/resolve class.
+2013-12-06 11:51:39,185 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(engineFactory)
+2013-12-06 11:51:39,186 DEBUG org.apache.axis.configuration.EngineConfigurationFactoryFinder$1:141 - Got EngineFactory: org.apache.axis.configuration.EngineConfigurationFactoryDefault
+2013-12-06 11:51:39,193 DEBUG org.apache.axis.AxisEngine:165 - Enter: AxisEngine::init
+2013-12-06 11:51:39,319 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
+2013-12-06 11:51:39,320 DEBUG org.apache.axis.utils.JavaUtils:1305 - Attachment support is enabled?  false
+2013-12-06 11:51:39,321 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(attachDisabled)
+2013-12-06 11:51:39,322  WARN org.apache.axis.utils.JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+2013-12-06 11:51:39,325 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(oddDigits00)
+2013-12-06 11:51:39,326 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(badChars01)
+2013-12-06 11:51:39,482 DEBUG org.apache.axis.AxisEngine:195 - Exit: AxisEngine::init
+2013-12-06 11:51:39,524 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: false
+2013-12-06 11:51:39,525 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Boolean' value 'false' to type 'Boolean'
+2013-12-06 11:51:39,526 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Boolean
+2013-12-06 11:51:39,531 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,532 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Byte'
+2013-12-06 11:51:39,532 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Byte value '0'
+2013-12-06 11:51:39,534 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value:  
+2013-12-06 11:51:39,535 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Character' value ' ' to type 'Character'
+2013-12-06 11:51:39,535 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Character
+2013-12-06 11:51:39,537 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,538 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Double'
+2013-12-06 11:51:39,538 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Double value '0.0'
+2013-12-06 11:51:39,540 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,541 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Float'
+2013-12-06 11:51:39,542 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Float value '0.0'
+2013-12-06 11:51:39,543 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,544 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Integer'
+2013-12-06 11:51:39,545 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Integer
+2013-12-06 11:51:39,546 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,547 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Long'
+2013-12-06 11:51:39,548 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Long value '0'
+2013-12-06 11:51:39,550 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,550 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Short'
+2013-12-06 11:51:39,551 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Short value '0'
+2013-12-06 11:51:39,553 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0.0
+2013-12-06 11:51:39,554 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'BigDecimal' value '0.0' to type 'BigDecimal'
+2013-12-06 11:51:39,555 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a BigDecimal
+2013-12-06 11:51:39,556 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,557 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'BigInteger' value '0' to type 'BigInteger'
+2013-12-06 11:51:39,558 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a BigInteger
+2013-12-06 11:51:39,558 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: false
+2013-12-06 11:51:39,559 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Boolean' value 'false' to type 'Boolean'
+2013-12-06 11:51:39,560 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Boolean
+2013-12-06 11:51:39,560 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,561 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Byte'
+2013-12-06 11:51:39,561 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Byte value '0'
+2013-12-06 11:51:39,562 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value:  
+2013-12-06 11:51:39,563 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Character' value ' ' to type 'Character'
+2013-12-06 11:51:39,564 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Character
+2013-12-06 11:51:39,565 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,566 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Double'
+2013-12-06 11:51:39,566 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Double value '0.0'
+2013-12-06 11:51:39,567 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,568 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Float'
+2013-12-06 11:51:39,568 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Float value '0.0'
+2013-12-06 11:51:39,569 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,570 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Integer'
+2013-12-06 11:51:39,570 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Integer
+2013-12-06 11:51:39,571 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,572 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Long'
+2013-12-06 11:51:39,573 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Long value '0'
+2013-12-06 11:51:39,574 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 0
+2013-12-06 11:51:39,575 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Short'
+2013-12-06 11:51:39,593 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:158 -     Converted to Short value '0'
+2013-12-06 11:51:39,595 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: 
+2013-12-06 11:51:39,596 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'String' value '' to type 'String'
+2013-12-06 11:51:39,608 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Z@49938039
+2013-12-06 11:51:39,609 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'boolean[]' value '[Z@49938039' to type 'boolean[]'
+2013-12-06 11:51:39,610 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a boolean[]
+2013-12-06 11:51:39,610 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [B@783c342b
+2013-12-06 11:51:39,611 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'byte[]' value '[B@783c342b' to type 'byte[]'
+2013-12-06 11:51:39,611 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a byte[]
+2013-12-06 11:51:39,612 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [C@388530b8
+2013-12-06 11:51:39,612 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'char[]' value '[C@388530b8' to type 'char[]'
+2013-12-06 11:51:39,613 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a char[]
+2013-12-06 11:51:39,613 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [D@23abcc03
+2013-12-06 11:51:39,614 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'double[]' value '[D@23abcc03' to type 'double[]'
+2013-12-06 11:51:39,614 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a double[]
+2013-12-06 11:51:39,614 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [F@4026e9f9
+2013-12-06 11:51:39,615 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'float[]' value '[F@4026e9f9' to type 'float[]'
+2013-12-06 11:51:39,616 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a float[]
+2013-12-06 11:51:39,616 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [I@643ae941
+2013-12-06 11:51:39,617 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'int[]' value '[I@643ae941' to type 'int[]'
+2013-12-06 11:51:39,617 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a int[]
+2013-12-06 11:51:39,621 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [J@4dd36dfe
+2013-12-06 11:51:39,621 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'long[]' value '[J@4dd36dfe' to type 'long[]'
+2013-12-06 11:51:39,622 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a long[]
+2013-12-06 11:51:39,622 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [S@786c730
+2013-12-06 11:51:39,623 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'short[]' value '[S@786c730' to type 'short[]'
+2013-12-06 11:51:39,623 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a short[]
+2013-12-06 11:51:39,624 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.math.BigDecimal;@221fd5e2
+2013-12-06 11:51:39,628 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'BigDecimal[]' value '[Ljava.math.BigDecimal;@221fd5e2' to type 'BigDecimal[]'
+2013-12-06 11:51:39,629 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a BigDecimal[]
+2013-12-06 11:51:39,629 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.math.BigInteger;@45d6a56e
+2013-12-06 11:51:39,630 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'BigInteger[]' value '[Ljava.math.BigInteger;@45d6a56e' to type 'BigInteger[]'
+2013-12-06 11:51:39,630 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a BigInteger[]
+2013-12-06 11:51:39,631 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Boolean;@13b06041
+2013-12-06 11:51:39,631 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Boolean[]' value '[Ljava.lang.Boolean;@13b06041' to type 'Boolean[]'
+2013-12-06 11:51:39,631 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Boolean[]
+2013-12-06 11:51:39,632 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Byte;@7c6572b
+2013-12-06 11:51:39,632 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Byte[]' value '[Ljava.lang.Byte;@7c6572b' to type 'Byte[]'
+2013-12-06 11:51:39,633 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Byte[]
+2013-12-06 11:51:39,633 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Character;@506f9b8e
+2013-12-06 11:51:39,634 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Character[]' value '[Ljava.lang.Character;@506f9b8e' to type 'Character[]'
+2013-12-06 11:51:39,634 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Character[]
+2013-12-06 11:51:39,635 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Double;@75982fc1
+2013-12-06 11:51:39,635 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Double[]' value '[Ljava.lang.Double;@75982fc1' to type 'Double[]'
+2013-12-06 11:51:39,636 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Double[]
+2013-12-06 11:51:39,636 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Float;@39e4853f
+2013-12-06 11:51:39,636 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Float[]' value '[Ljava.lang.Float;@39e4853f' to type 'Float[]'
+2013-12-06 11:51:39,637 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Float[]
+2013-12-06 11:51:39,637 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Integer;@20992bae
+2013-12-06 11:51:39,638 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer[]' value '[Ljava.lang.Integer;@20992bae' to type 'Integer[]'
+2013-12-06 11:51:39,638 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Integer[]
+2013-12-06 11:51:39,639 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Long;@4bd53f5b
+2013-12-06 11:51:39,639 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Long[]' value '[Ljava.lang.Long;@4bd53f5b' to type 'Long[]'
+2013-12-06 11:51:39,640 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Long[]
+2013-12-06 11:51:39,640 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Short;@6426d607
+2013-12-06 11:51:39,640 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Short[]' value '[Ljava.lang.Short;@6426d607' to type 'Short[]'
+2013-12-06 11:51:39,641 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Short[]
+2013-12-06 11:51:39,642 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.String;@7c138c63
+2013-12-06 11:51:39,642 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'String[]' value '[Ljava.lang.String;@7c138c63' to type 'String[]'
+2013-12-06 11:51:39,642 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a String[]
+2013-12-06 11:51:39,643 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.lang.Class;@5749b290
+2013-12-06 11:51:39,643 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Class[]' value '[Ljava.lang.Class;@5749b290' to type 'Class[]'
+2013-12-06 11:51:39,644 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Class[]
+2013-12-06 11:51:39,644 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.util.Date;@2eb1074a
+2013-12-06 11:51:39,645 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Date[]' value '[Ljava.util.Date;@2eb1074a' to type 'Date[]'
+2013-12-06 11:51:39,645 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Date[]
+2013-12-06 11:51:39,646 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.util.Calendar;@4e4ee70b
+2013-12-06 11:51:39,646 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Calendar[]' value '[Ljava.util.Calendar;@4e4ee70b' to type 'Calendar[]'
+2013-12-06 11:51:39,646 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Calendar[]
+2013-12-06 11:51:39,647 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.io.File;@761eec35
+2013-12-06 11:51:39,647 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'java.io.File[]' value '[Ljava.io.File;@761eec35' to type 'java.io.File[]'
+2013-12-06 11:51:39,648 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a java.io.File[]
+2013-12-06 11:51:39,648 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.sql.Date;@7a0d85cc
+2013-12-06 11:51:39,649 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'java.sql.Date[]' value '[Ljava.sql.Date;@7a0d85cc' to type 'java.sql.Date[]'
+2013-12-06 11:51:39,649 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a java.sql.Date[]
+2013-12-06 11:51:39,650 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.sql.Time;@1fa12495
+2013-12-06 11:51:39,650 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'java.sql.Time[]' value '[Ljava.sql.Time;@1fa12495' to type 'java.sql.Time[]'
+2013-12-06 11:51:39,650 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a java.sql.Time[]
+2013-12-06 11:51:39,651 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.sql.Timestamp;@31b446d1
+2013-12-06 11:51:39,651 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'java.sql.Timestamp[]' value '[Ljava.sql.Timestamp;@31b446d1' to type 'java.sql.Timestamp[]'
+2013-12-06 11:51:39,652 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a java.sql.Timestamp[]
+2013-12-06 11:51:39,652 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:336 - Setting default value: [Ljava.net.URL;@6c01bde4
+2013-12-06 11:51:39,652 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'java.net.URL[]' value '[Ljava.net.URL;@6c01bde4' to type 'java.net.URL[]'
+2013-12-06 11:51:39,653 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a java.net.URL[]
+2013-12-06 11:51:39,668 DEBUG org.apache.commons.beanutils.BeanUtilsBean:246 - BeanUtils.copyProperties(data.ws.wsserver.umobileportal.ericsson.com.Request@1, com.ericsson.ema.downstream.bean.RequestBean@371bed71)
+2013-12-06 11:51:39,678 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'String' value '60112000001' to type 'String'
+2013-12-06 11:51:39,683 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'String' value '334433' to type 'String'
+2013-12-06 11:51:39,773 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(transport00)
+2013-12-06 11:51:39,774 DEBUG org.apache.axis.client.Call:2119 - Transport is org.apache.axis.transport.http.HTTPTransport@8542529
+2013-12-06 11:51:39,782 DEBUG org.apache.axis.client.Call:2351 - Enter: Call::invoke(ns, meth, args)
+2013-12-06 11:51:39,786 DEBUG org.apache.axis.client.Call:2043 - operation=name:        addNewPortalUser
+returnQName: {http://www.u.com.my/}return
+returnType:  {java:com.ericsson.umobileportal.wsserver.ws.data}Response
+returnClass: class data.ws.wsserver.umobileportal.ericsson.com.Response
+elementQName:null
+soapAction:  null
+style:       wrapped
+use:         literal
+numInParams: 1
+method:null
+ ParameterDesc[0]:
+  name:       {http://www.u.com.my/}request
+  typeEntry:  null
+  mode:       IN
+  position:   0
+  isReturn:   false
+  typeQName:  {java:com.ericsson.umobileportal.wsserver.ws.data}Request
+  javaType:   class data.ws.wsserver.umobileportal.ericsson.com.Request
+  inHeader:   false
+  outHeader:  false
+
+
+2013-12-06 11:51:39,787 DEBUG org.apache.axis.client.Call:2045 - operation.getNumParams()=1
+2013-12-06 11:51:39,787 DEBUG org.apache.axis.client.Call:2068 - getParamList number of params: 1
+2013-12-06 11:51:39,794 DEBUG org.apache.axis.client.Call:2405 - Enter: Call::invoke(RPCElement)
+2013-12-06 11:51:39,809 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
+2013-12-06 11:51:39,810 DEBUG org.apache.axis.Message:289 - Attachment support is enabled?  false
+2013-12-06 11:51:39,820 DEBUG org.apache.axis.SOAPPart:182 - Enter: SOAPPart ctor(FORM_SOAPENVELOPE)
+2013-12-06 11:51:39,820 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2013-12-06 11:51:39,821 DEBUG org.apache.axis.SOAPPart:374 - Setting current message form to: FORM_SOAPENVELOPE (currentMessage is now org.apache.axis.message.SOAPEnvelope)
+2013-12-06 11:51:39,821 DEBUG org.apache.axis.SOAPPart:188 - Exit: SOAPPart ctor()
+2013-12-06 11:51:39,822 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(addBody00)
+2013-12-06 11:51:39,822 DEBUG org.apache.axis.message.SOAPBody:168 - Adding body element to message...
+2013-12-06 11:51:39,823 DEBUG org.apache.axis.client.Call:2638 - Enter: Call::invoke()
+2013-12-06 11:51:39,824 DEBUG org.apache.axis.SOAPPart:661 - Enter: SOAPPart::getAsSOAPEnvelope()
+2013-12-06 11:51:39,824 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(currForm)
+2013-12-06 11:51:39,825 DEBUG org.apache.axis.SOAPPart:662 - current form is FORM_SOAPENVELOPE
+2013-12-06 11:51:39,825 DEBUG org.apache.axis.MessageContext:749 - MessageContext: setTargetService(http://www.u.com.my/)
+2013-12-06 11:51:39,826 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(noService10)
+2013-12-06 11:51:39,828 DEBUG org.apache.axis.ConfigurationException:110 - Exception: 
+org.apache.axis.ConfigurationException: No service named http://www.u.com.my/ is available
+org.apache.axis.ConfigurationException: No service named http://www.u.com.my/ is available
+	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233)
+	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311)
+	at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756)
+	at org.apache.axis.client.Call.invoke(Call.java:2708)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at my.com.u.www.UmobilePortalServiceSoapBindingStub.addNewPortalUser(UmobilePortalServiceSoapBindingStub.java:340)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processAddNewPortalUser(ProvisioningService.java:152)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processRequest(ProvisioningService.java:62)
+	at com.ericsson.ema.downstream.controller.ProvisioningController.performJob(ProvisioningController.java:78)
+	at com.ericsson.ema.downstream.webpsub.DemoJavalink.sendMessage(DemoJavalink.java:83)
+	at com.ericsson.ema.downstream.webpsub.TestDemoJavalink.main(TestDemoJavalink.java:54)
+
+	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233)
+	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311)
+	at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756)
+	at org.apache.axis.client.Call.invoke(Call.java:2708)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at my.com.u.www.UmobilePortalServiceSoapBindingStub.addNewPortalUser(UmobilePortalServiceSoapBindingStub.java:340)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processAddNewPortalUser(ProvisioningService.java:152)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processRequest(ProvisioningService.java:62)
+	at com.ericsson.ema.downstream.controller.ProvisioningController.performJob(ProvisioningController.java:78)
+	at com.ericsson.ema.downstream.webpsub.DemoJavalink.sendMessage(DemoJavalink.java:83)
+	at com.ericsson.ema.downstream.webpsub.TestDemoJavalink.main(TestDemoJavalink.java:54)
+2013-12-06 11:51:39,830 DEBUG org.apache.axis.MessageContext:793 - MessageContext: setServiceHandler(null)
+2013-12-06 11:51:39,831 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(targetService)
+2013-12-06 11:51:39,831 DEBUG org.apache.axis.client.Call:2715 - Target service:  http://www.u.com.my/
+2013-12-06 11:51:39,831 DEBUG org.apache.axis.SOAPPart:661 - Enter: SOAPPart::getAsSOAPEnvelope()
+2013-12-06 11:51:39,832 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(currForm)
+2013-12-06 11:51:39,832 DEBUG org.apache.axis.SOAPPart:662 - current form is FORM_SOAPENVELOPE
+2013-12-06 11:51:39,832 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(addHeader00)
+2013-12-06 11:51:39,833 DEBUG org.apache.axis.message.SOAPHeader:197 - Adding header to message...
+2013-12-06 11:51:39,833 DEBUG org.apache.axis.MessageContext:749 - MessageContext: setTargetService()
+2013-12-06 11:51:39,833 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(noService10)
+2013-12-06 11:51:39,834 DEBUG org.apache.axis.ConfigurationException:110 - Exception: 
+org.apache.axis.ConfigurationException: No service named  is available
+org.apache.axis.ConfigurationException: No service named  is available
+	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233)
+	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311)
+	at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756)
+	at org.apache.axis.transport.http.HTTPTransport.setupMessageContextImpl(HTTPTransport.java:89)
+	at org.apache.axis.client.Transport.setupMessageContext(Transport.java:46)
+	at org.apache.axis.client.Call.invoke(Call.java:2738)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at my.com.u.www.UmobilePortalServiceSoapBindingStub.addNewPortalUser(UmobilePortalServiceSoapBindingStub.java:340)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processAddNewPortalUser(ProvisioningService.java:152)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processRequest(ProvisioningService.java:62)
+	at com.ericsson.ema.downstream.controller.ProvisioningController.performJob(ProvisioningController.java:78)
+	at com.ericsson.ema.downstream.webpsub.DemoJavalink.sendMessage(DemoJavalink.java:83)
+	at com.ericsson.ema.downstream.webpsub.TestDemoJavalink.main(TestDemoJavalink.java:54)
+
+	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233)
+	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311)
+	at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756)
+	at org.apache.axis.transport.http.HTTPTransport.setupMessageContextImpl(HTTPTransport.java:89)
+	at org.apache.axis.client.Transport.setupMessageContext(Transport.java:46)
+	at org.apache.axis.client.Call.invoke(Call.java:2738)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at my.com.u.www.UmobilePortalServiceSoapBindingStub.addNewPortalUser(UmobilePortalServiceSoapBindingStub.java:340)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processAddNewPortalUser(ProvisioningService.java:152)
+	at com.ericsson.ema.downstream.service.ProvisioningService.processRequest(ProvisioningService.java:62)
+	at com.ericsson.ema.downstream.controller.ProvisioningController.performJob(ProvisioningController.java:78)
+	at com.ericsson.ema.downstream.webpsub.DemoJavalink.sendMessage(DemoJavalink.java:83)
+	at com.ericsson.ema.downstream.webpsub.TestDemoJavalink.main(TestDemoJavalink.java:54)
+2013-12-06 11:51:39,836 DEBUG org.apache.axis.MessageContext:793 - MessageContext: setServiceHandler(null)
+2013-12-06 11:51:39,844 DEBUG org.apache.axis.SOAPPart:661 - Enter: SOAPPart::getAsSOAPEnvelope()
+2013-12-06 11:51:39,844 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(currForm)
+2013-12-06 11:51:39,845 DEBUG org.apache.axis.SOAPPart:662 - current form is FORM_SOAPENVELOPE
+2013-12-06 11:51:39,845 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,845 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2013-12-06 11:51:39,846 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,846 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2013-12-06 11:51:39,846 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,847 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
+2013-12-06 11:51:39,847 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,847 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
+2013-12-06 11:51:39,848 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,848 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+2013-12-06 11:51:39,853 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(headers00)
+2013-12-06 11:51:39,853 DEBUG org.apache.axis.message.SOAPHeader:318 - 1 headers
+2013-12-06 11:51:39,854 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,854 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Header
+2013-12-06 11:51:39,855 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,855 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'wsse' - 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd'
+2013-12-06 11:51:39,856 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,856 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:Security
+2013-12-06 11:51:39,861 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,861 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:UsernameToken
+2013-12-06 11:51:39,863 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,863 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:Username
+2013-12-06 11:51:39,864 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,864 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:Username
+2013-12-06 11:51:39,865 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,865 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:Password
+2013-12-06 11:51:39,866 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,866 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:Password
+2013-12-06 11:51:39,867 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,867 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:UsernameToken
+2013-12-06 11:51:39,867 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,868 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:Security
+2013-12-06 11:51:39,868 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,868 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Header
+2013-12-06 11:51:39,869 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,869 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+2013-12-06 11:51:39,870 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,870 DEBUG org.apache.axis.encoding.SerializationContext:472 - register '' - 'http://www.u.com.my/'
+2013-12-06 11:51:39,871 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,871 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://www.u.com.my/]:addNewPortalUser
+2013-12-06 11:51:39,872 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,872 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://www.u.com.my/]:request
+2013-12-06 11:51:39,879 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,880 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:RequestID
+2013-12-06 11:51:39,880 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,881 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'ns1' - 'java:com.ericsson.umobileportal.wsserver.ws.data'
+2013-12-06 11:51:39,881 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,882 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element ns1:RequestID
+2013-12-06 11:51:39,882 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,883 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:Msisdn
+2013-12-06 11:51:39,883 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,884 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'ns2' - 'java:com.ericsson.umobileportal.wsserver.ws.data'
+2013-12-06 11:51:39,884 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,885 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element ns2:Msisdn
+2013-12-06 11:51:39,885 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,885 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element request
+2013-12-06 11:51:39,886 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,886 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element addNewPortalUser
+2013-12-06 11:51:39,886 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,887 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Body
+2013-12-06 11:51:39,887 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,888 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Envelope
+2013-12-06 11:51:39,888 DEBUG org.apache.axis.client.Call:2762 - <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><wsse:UsernameToken><wsse:Username>IatPrtal</wsse:Username><wsse:Password>IatPrtal</wsse:Password></wsse:UsernameToken></wsse:Security></soapenv:Header><soapenv:Body><addNewPortalUser xmlns="http://www.u.com.my/"><request><ns1:RequestID xmlns:ns1="java:com.ericsson.umobileportal.wsserver.ws.data">334433</ns1:RequestID><ns2:Msisdn xmlns:ns2="java:com.ericsson.umobileportal.wsserver.ws.data">60112000001</ns2:Msisdn></request></addNewPortalUser></soapenv:Body></soapenv:Envelope>
+2013-12-06 11:51:39,888 DEBUG org.apache.axis.client.AxisClient:77 - Enter: AxisClient::invoke
+2013-12-06 11:51:39,889 DEBUG org.apache.axis.client.AxisClient:90 - EngineHandler: null
+2013-12-06 11:51:39,894 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(axisUserAgent)
+2013-12-06 11:51:39,901 DEBUG org.apache.axis.SimpleChain:79 - Enter: SimpleChain::invoke
+2013-12-06 11:51:39,902 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(enter00)
+2013-12-06 11:51:39,902 DEBUG org.apache.axis.transport.http.HTTPSender:125 - Enter:  HTTPSender::invoke
+2013-12-06 11:51:39,904 DEBUG org.apache.axis.SOAPPart:524 - Enter: SOAPPart::saveChanges
+2013-12-06 11:51:39,906 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,907 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2013-12-06 11:51:39,907 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,908 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2013-12-06 11:51:39,908 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,909 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
+2013-12-06 11:51:39,909 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,910 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
+2013-12-06 11:51:39,910 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,911 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+2013-12-06 11:51:39,911 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(headers00)
+2013-12-06 11:51:39,912 DEBUG org.apache.axis.message.SOAPHeader:318 - 1 headers
+2013-12-06 11:51:39,912 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,913 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Header
+2013-12-06 11:51:39,913 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,914 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'wsse' - 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd'
+2013-12-06 11:51:39,914 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,915 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:Security
+2013-12-06 11:51:39,915 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,916 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:UsernameToken
+2013-12-06 11:51:39,917 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,917 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:Username
+2013-12-06 11:51:39,918 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,918 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:Username
+2013-12-06 11:51:39,919 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,919 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd]:Password
+2013-12-06 11:51:39,920 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,921 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:Password
+2013-12-06 11:51:39,921 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,922 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:UsernameToken
+2013-12-06 11:51:39,922 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,923 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element wsse:Security
+2013-12-06 11:51:39,923 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,924 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Header
+2013-12-06 11:51:39,924 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,925 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+2013-12-06 11:51:39,925 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,926 DEBUG org.apache.axis.encoding.SerializationContext:472 - register '' - 'http://www.u.com.my/'
+2013-12-06 11:51:39,926 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,927 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://www.u.com.my/]:addNewPortalUser
+2013-12-06 11:51:39,927 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,928 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://www.u.com.my/]:request
+2013-12-06 11:51:39,928 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,929 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:RequestID
+2013-12-06 11:51:39,934 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,935 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'ns1' - 'java:com.ericsson.umobileportal.wsserver.ws.data'
+2013-12-06 11:51:39,935 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,936 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element ns1:RequestID
+2013-12-06 11:51:39,937 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:39,938 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:Msisdn
+2013-12-06 11:51:39,938 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:39,939 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'ns2' - 'java:com.ericsson.umobileportal.wsserver.ws.data'
+2013-12-06 11:51:39,939 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,940 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element ns2:Msisdn
+2013-12-06 11:51:39,940 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,941 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element request
+2013-12-06 11:51:39,941 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,942 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element addNewPortalUser
+2013-12-06 11:51:39,942 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,943 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Body
+2013-12-06 11:51:39,943 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:39,944 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Envelope
+2013-12-06 11:51:39,944 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2013-12-06 11:51:39,947 DEBUG org.apache.axis.SOAPPart:374 - Setting current message form to: FORM_OPTIMIZED (currentMessage is now org.apache.axis.utils.ByteArray)
+2013-12-06 11:51:39,947 DEBUG org.apache.axis.SOAPPart:537 - Exit: SOAPPart::saveChanges(): org.apache.axis.utils.ByteArray@3e018c74
+2013-12-06 11:51:39,982 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(createdHTTP00)
+2013-12-06 11:51:39,984 DEBUG org.apache.axis.components.net.DefaultSocketFactory:122 - Created an insecure HTTP connection
+2013-12-06 11:51:39,986 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(xmlSent00)
+2013-12-06 11:51:39,987 DEBUG org.apache.axis.transport.http.HTTPSender:484 - XML sent:
+2013-12-06 11:51:39,988 DEBUG org.apache.axis.transport.http.HTTPSender:485 - ---------------------------------------------------
+2013-12-06 11:51:39,992 DEBUG org.apache.axis.transport.http.HTTPSender:519 - POST /mockUmobilePortalServiceSoapBinding HTTP/1.0
+Content-Type: text/xml; charset=utf-8
+Accept: application/soap+xml, application/dime, multipart/related, text/*
+User-Agent: Axis/1.4
+Host: E72C4138049AD9:8088
+Cache-Control: no-cache
+Pragma: no-cache
+SOAPAction: ""
+Content-Length: 846
+
+<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><wsse:UsernameToken><wsse:Username>IatPrtal</wsse:Username><wsse:Password>IatPrtal</wsse:Password></wsse:UsernameToken></wsse:Security></soapenv:Header><soapenv:Body><addNewPortalUser xmlns="http://www.u.com.my/"><request><ns1:RequestID xmlns:ns1="java:com.ericsson.umobileportal.wsserver.ws.data">334433</ns1:RequestID><ns2:Msisdn xmlns:ns2="java:com.ericsson.umobileportal.wsserver.ws.data">60112000001</ns2:Msisdn></request></addNewPortalUser></soapenv:Body></soapenv:Envelope>
+2013-12-06 11:51:40,017 DEBUG org.apache.axis.transport.http.HTTPSender:627 - HTTP/1.1 200 OK
+2013-12-06 11:51:40,018 DEBUG org.apache.axis.transport.http.HTTPSender:627 - Content-Type text/xml; charset=utf-8
+2013-12-06 11:51:40,019 DEBUG org.apache.axis.transport.http.HTTPSender:627 - Server Jetty(6.1.26)
+2013-12-06 11:51:40,021 DEBUG org.apache.axis.SOAPPart:182 - Enter: SOAPPart ctor(FORM_INPUTSTREAM)
+2013-12-06 11:51:40,021 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2013-12-06 11:51:40,022 DEBUG org.apache.axis.SOAPPart:374 - Setting current message form to: FORM_INPUTSTREAM (currentMessage is now org.apache.axis.transport.http.SocketInputStream)
+2013-12-06 11:51:40,022 DEBUG org.apache.axis.SOAPPart:188 - Exit: SOAPPart ctor()
+2013-12-06 11:51:40,023 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(no00)
+2013-12-06 11:51:40,023 DEBUG org.apache.axis.transport.http.HTTPSender:791 - 
+no Content-Length
+2013-12-06 11:51:40,024 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(xmlRecd00)
+2013-12-06 11:51:40,024 DEBUG org.apache.axis.transport.http.HTTPSender:794 - 
+XML received:
+2013-12-06 11:51:40,025 DEBUG org.apache.axis.transport.http.HTTPSender:795 - -----------------------------------------------
+2013-12-06 11:51:40,025 DEBUG org.apache.axis.SOAPPart:661 - Enter: SOAPPart::getAsSOAPEnvelope()
+2013-12-06 11:51:40,025 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(currForm)
+2013-12-06 11:51:40,026 DEBUG org.apache.axis.SOAPPart:662 - current form is FORM_INPUTSTREAM
+2013-12-06 11:51:40,047 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,048 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.EnvelopeHandler@4f2b6c89
+2013-12-06 11:51:40,051 DEBUG org.apache.axis.encoding.DeserializationContext:886 - Enter: DeserializationContext::startPrefixMapping(soapenv, http://schemas.xmlsoap.org/soap/envelope/)
+2013-12-06 11:51:40,052 DEBUG org.apache.axis.encoding.DeserializationContext:925 - Exit: DeserializationContext::startPrefixMapping()
+2013-12-06 11:51:40,052 DEBUG org.apache.axis.encoding.DeserializationContext:886 - Enter: DeserializationContext::startPrefixMapping(u, http://www.u.com.my/)
+2013-12-06 11:51:40,053 DEBUG org.apache.axis.encoding.DeserializationContext:925 - Exit: DeserializationContext::startPrefixMapping()
+2013-12-06 11:51:40,054 DEBUG org.apache.axis.encoding.DeserializationContext:886 - Enter: DeserializationContext::startPrefixMapping(java, java:com.ericsson.umobileportal.wsserver.ws.data)
+2013-12-06 11:51:40,055 DEBUG org.apache.axis.encoding.DeserializationContext:925 - Exit: DeserializationContext::startPrefixMapping()
+2013-12-06 11:51:40,055 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(http://schemas.xmlsoap.org/soap/envelope/, Envelope)
+2013-12-06 11:51:40,056 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,057 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.EnvelopeBuilder@2be2befa
+2013-12-06 11:51:40,058 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element Envelope
+2013-12-06 11:51:40,059 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,060 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(http://schemas.xmlsoap.org/soap/envelope/, Header)
+2013-12-06 11:51:40,061 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,062 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.HeaderBuilder@7a7c3885
+2013-12-06 11:51:40,062 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,063 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.SOAPHeader@7162e295) named {soapenv}Header
+2013-12-06 11:51:40,064 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element Header
+2013-12-06 11:51:40,064 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,065 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(http://schemas.xmlsoap.org/soap/envelope/, Header)
+2013-12-06 11:51:40,065 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,066 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.HeaderBuilder@7a7c3885
+2013-12-06 11:51:40,067 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.SOAPEnvelope:Envelope
+2013-12-06 11:51:40,067 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,068 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(http://schemas.xmlsoap.org/soap/envelope/, Body)
+2013-12-06 11:51:40,073 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,074 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.BodyBuilder@6ce53220
+2013-12-06 11:51:40,074 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,075 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.SOAPBody@3b3e0aba) named {soapenv}Body
+2013-12-06 11:51:40,075 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element Body
+2013-12-06 11:51:40,076 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,077 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(http://www.u.com.my/, addNewPortalUserResponse)
+2013-12-06 11:51:40,077 DEBUG org.apache.axis.message.BodyBuilder:109 - Enter: BodyBuilder::onStartChild()
+2013-12-06 11:51:40,078 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,078 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.RPCElement@663257b8) named {u}addNewPortalUserResponse
+2013-12-06 11:51:40,079 DEBUG org.apache.axis.message.BodyBuilder:222 - Exit: BodyBuilder::onStartChild()
+2013-12-06 11:51:40,080 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,080 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.SOAPHandler@731d2572
+2013-12-06 11:51:40,081 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element addNewPortalUserResponse
+2013-12-06 11:51:40,081 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,082 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(http://www.u.com.my/, return)
+2013-12-06 11:51:40,085 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,085 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.SOAPHandler@755c62bc
+2013-12-06 11:51:40,086 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,086 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.MessageElement@45660d6) named {u}return
+2013-12-06 11:51:40,087 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element return
+2013-12-06 11:51:40,087 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,088 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, RequestID)
+2013-12-06 11:51:40,089 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,089 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.SOAPHandler@42ef83d3
+2013-12-06 11:51:40,090 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,090 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.MessageElement@7ab7b3f9) named {java}RequestID
+2013-12-06 11:51:40,091 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element RequestID
+2013-12-06 11:51:40,091 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,092 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, RequestID)
+2013-12-06 11:51:40,092 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,093 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.SOAPHandler@42ef83d3
+2013-12-06 11:51:40,094 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,094 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,095 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, StatusCode)
+2013-12-06 11:51:40,095 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,096 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.SOAPHandler@3288df60
+2013-12-06 11:51:40,097 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,097 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.MessageElement@3801318b) named {java}StatusCode
+2013-12-06 11:51:40,098 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element StatusCode
+2013-12-06 11:51:40,098 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,099 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, StatusCode)
+2013-12-06 11:51:40,099 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,100 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.SOAPHandler@3288df60
+2013-12-06 11:51:40,100 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,101 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,101 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, ErrorMessage)
+2013-12-06 11:51:40,102 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,102 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.SOAPHandler@565bb966
+2013-12-06 11:51:40,103 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,103 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.MessageElement@1fe903d5) named {java}ErrorMessage
+2013-12-06 11:51:40,104 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element ErrorMessage
+2013-12-06 11:51:40,104 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,105 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, ErrorMessage)
+2013-12-06 11:51:40,105 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,106 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.SOAPHandler@565bb966
+2013-12-06 11:51:40,107 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,107 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,108 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, TransactionId)
+2013-12-06 11:51:40,108 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,109 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.SOAPHandler@7afaa550
+2013-12-06 11:51:40,109 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2013-12-06 11:51:40,110 DEBUG org.apache.axis.message.MessageElement:239 - New MessageElement (org.apache.axis.message.MessageElement@5d7b6643) named {java}TransactionId
+2013-12-06 11:51:40,110 DEBUG org.apache.axis.encoding.DeserializationContext:765 - Pushing element TransactionId
+2013-12-06 11:51:40,111 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,112 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, TransactionId)
+2013-12-06 11:51:40,112 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,113 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.SOAPHandler@7afaa550
+2013-12-06 11:51:40,114 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,114 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,115 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(http://www.u.com.my/, return)
+2013-12-06 11:51:40,115 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,116 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.SOAPHandler@755c62bc
+2013-12-06 11:51:40,116 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.RPCElement:addNewPortalUserResponse
+2013-12-06 11:51:40,117 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,117 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(http://www.u.com.my/, addNewPortalUserResponse)
+2013-12-06 11:51:40,118 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,118 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.SOAPHandler@731d2572
+2013-12-06 11:51:40,119 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.SOAPBody:Body
+2013-12-06 11:51:40,119 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,120 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(http://schemas.xmlsoap.org/soap/envelope/, Body)
+2013-12-06 11:51:40,120 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,121 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.BodyBuilder@6ce53220
+2013-12-06 11:51:40,121 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.SOAPEnvelope:Envelope
+2013-12-06 11:51:40,122 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,122 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(http://schemas.xmlsoap.org/soap/envelope/, Envelope)
+2013-12-06 11:51:40,123 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,124 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.EnvelopeBuilder@2be2befa
+2013-12-06 11:51:40,124 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to null
+2013-12-06 11:51:40,125 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,125 DEBUG org.apache.axis.encoding.DeserializationContext:933 - Enter: DeserializationContext::endPrefixMapping(soapenv)
+2013-12-06 11:51:40,126 DEBUG org.apache.axis.encoding.DeserializationContext:945 - Exit: DeserializationContext::endPrefixMapping()
+2013-12-06 11:51:40,126 DEBUG org.apache.axis.encoding.DeserializationContext:933 - Enter: DeserializationContext::endPrefixMapping(u)
+2013-12-06 11:51:40,127 DEBUG org.apache.axis.encoding.DeserializationContext:945 - Exit: DeserializationContext::endPrefixMapping()
+2013-12-06 11:51:40,127 DEBUG org.apache.axis.encoding.DeserializationContext:933 - Enter: DeserializationContext::endPrefixMapping(java)
+2013-12-06 11:51:40,128 DEBUG org.apache.axis.encoding.DeserializationContext:945 - Exit: DeserializationContext::endPrefixMapping()
+2013-12-06 11:51:40,129 DEBUG org.apache.axis.encoding.DeserializationContext:858 - Enter: DeserializationContext::endDocument()
+2013-12-06 11:51:40,129 DEBUG org.apache.axis.encoding.DeserializationContext:866 - Exit: DeserializationContext::endDocument()
+2013-12-06 11:51:40,130 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2013-12-06 11:51:40,130 DEBUG org.apache.axis.SOAPPart:374 - Setting current message form to: FORM_SOAPENVELOPE (currentMessage is now org.apache.axis.message.SOAPEnvelope)
+2013-12-06 11:51:40,131 DEBUG org.apache.axis.SOAPPart:724 - Exit: SOAPPart::getAsSOAPEnvelope
+2013-12-06 11:51:40,131 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:40,132 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2013-12-06 11:51:40,132 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:40,133 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'u' - 'http://www.u.com.my/'
+2013-12-06 11:51:40,133 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(register00)
+2013-12-06 11:51:40,133 DEBUG org.apache.axis.encoding.SerializationContext:472 - register 'java' - 'java:com.ericsson.umobileportal.wsserver.ws.data'
+2013-12-06 11:51:40,134 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,134 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+2013-12-06 11:51:40,135 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,135 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+2013-12-06 11:51:40,138 DEBUG org.apache.axis.message.SAXOutputter:94 - SAXOutputter.startElement ['http://www.u.com.my/' addNewPortalUserResponse]
+2013-12-06 11:51:40,139 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,139 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://www.u.com.my/]:addNewPortalUserResponse
+2013-12-06 11:51:40,140 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['
+         ']
+2013-12-06 11:51:40,140 DEBUG org.apache.axis.message.SAXOutputter:94 - SAXOutputter.startElement ['http://www.u.com.my/' return]
+2013-12-06 11:51:40,141 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,141 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [http://www.u.com.my/]:return
+2013-12-06 11:51:40,142 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['
+            ']
+2013-12-06 11:51:40,142 DEBUG org.apache.axis.message.SAXOutputter:94 - SAXOutputter.startElement ['java:com.ericsson.umobileportal.wsserver.ws.data' RequestID]
+2013-12-06 11:51:40,142 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,143 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:RequestID
+2013-12-06 11:51:40,143 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['111']
+2013-12-06 11:51:40,144 DEBUG org.apache.axis.message.SAXOutputter:109 - SAXOutputter.endElement ['java:com.ericsson.umobileportal.wsserver.ws.data' RequestID]
+2013-12-06 11:51:40,144 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,145 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element java:RequestID
+2013-12-06 11:51:40,145 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['
+            ']
+2013-12-06 11:51:40,145 DEBUG org.apache.axis.message.SAXOutputter:94 - SAXOutputter.startElement ['java:com.ericsson.umobileportal.wsserver.ws.data' StatusCode]
+2013-12-06 11:51:40,146 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,146 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:StatusCode
+2013-12-06 11:51:40,147 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['0']
+2013-12-06 11:51:40,147 DEBUG org.apache.axis.message.SAXOutputter:109 - SAXOutputter.endElement ['java:com.ericsson.umobileportal.wsserver.ws.data' StatusCode]
+2013-12-06 11:51:40,148 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,148 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element java:StatusCode
+2013-12-06 11:51:40,148 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['
+            ']
+2013-12-06 11:51:40,149 DEBUG org.apache.axis.message.SAXOutputter:94 - SAXOutputter.startElement ['java:com.ericsson.umobileportal.wsserver.ws.data' ErrorMessage]
+2013-12-06 11:51:40,149 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,150 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:ErrorMessage
+2013-12-06 11:51:40,150 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['Success']
+2013-12-06 11:51:40,151 DEBUG org.apache.axis.message.SAXOutputter:109 - SAXOutputter.endElement ['java:com.ericsson.umobileportal.wsserver.ws.data' ErrorMessage]
+2013-12-06 11:51:40,151 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,151 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element java:ErrorMessage
+2013-12-06 11:51:40,152 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['
+            ']
+2013-12-06 11:51:40,152 DEBUG org.apache.axis.message.SAXOutputter:94 - SAXOutputter.startElement ['java:com.ericsson.umobileportal.wsserver.ws.data' TransactionId]
+2013-12-06 11:51:40,153 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2013-12-06 11:51:40,153 DEBUG org.apache.axis.encoding.SerializationContext:1098 - Start element [java:com.ericsson.umobileportal.wsserver.ws.data]:TransactionId
+2013-12-06 11:51:40,153 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['111']
+2013-12-06 11:51:40,154 DEBUG org.apache.axis.message.SAXOutputter:109 - SAXOutputter.endElement ['java:com.ericsson.umobileportal.wsserver.ws.data' TransactionId]
+2013-12-06 11:51:40,154 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,155 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element java:TransactionId
+2013-12-06 11:51:40,199 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['
+         ']
+2013-12-06 11:51:40,200 DEBUG org.apache.axis.message.SAXOutputter:109 - SAXOutputter.endElement ['http://www.u.com.my/' return]
+2013-12-06 11:51:40,200 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,201 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element u:return
+2013-12-06 11:51:40,201 DEBUG org.apache.axis.message.SAXOutputter:63 - SAXOutputter.characters ['
+      ']
+2013-12-06 11:51:40,201 DEBUG org.apache.axis.message.SAXOutputter:109 - SAXOutputter.endElement ['http://www.u.com.my/' addNewPortalUserResponse]
+2013-12-06 11:51:40,202 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,202 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element u:addNewPortalUserResponse
+2013-12-06 11:51:40,202 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,202 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Body
+2013-12-06 11:51:40,203 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2013-12-06 11:51:40,203 DEBUG org.apache.axis.encoding.SerializationContext:1208 - End element soapenv:Envelope
+2013-12-06 11:51:40,204 DEBUG org.apache.axis.transport.http.HTTPSender:796 - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://www.u.com.my/" xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data"><soapenv:Body><u:addNewPortalUserResponse>
+         <u:return>
+            <java:RequestID>111</java:RequestID>
+            <java:StatusCode>0</java:StatusCode>
+            <java:ErrorMessage>Success</java:ErrorMessage>
+            <java:TransactionId>111</java:TransactionId>
+         </u:return>
+      </u:addNewPortalUserResponse></soapenv:Body></soapenv:Envelope>
+2013-12-06 11:51:40,204 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(exit00)
+2013-12-06 11:51:40,204 DEBUG org.apache.axis.transport.http.HTTPSender:157 - Exit:  HTTPDispatchHandler::invoke
+2013-12-06 11:51:40,204 DEBUG org.apache.axis.SimpleChain:86 - Exit: SimpleChain::invoke
+2013-12-06 11:51:40,205 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(semanticCheck00)
+2013-12-06 11:51:40,205 DEBUG org.apache.axis.handlers.soap.MustUnderstandChecker:55 - Doing SOAP semantic checks...
+2013-12-06 11:51:40,205 DEBUG org.apache.axis.SOAPPart:661 - Enter: SOAPPart::getAsSOAPEnvelope()
+2013-12-06 11:51:40,205 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(currForm)
+2013-12-06 11:51:40,206 DEBUG org.apache.axis.SOAPPart:662 - current form is FORM_SOAPENVELOPE
+2013-12-06 11:51:40,206 DEBUG org.apache.axis.client.AxisClient:226 - Exit: AxisClient::invoke
+2013-12-06 11:51:40,206 DEBUG org.apache.axis.SOAPPart:661 - Enter: SOAPPart::getAsSOAPEnvelope()
+2013-12-06 11:51:40,207 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(currForm)
+2013-12-06 11:51:40,207 DEBUG org.apache.axis.SOAPPart:662 - current form is FORM_SOAPENVELOPE
+2013-12-06 11:51:40,207 DEBUG org.apache.axis.client.Call:2773 - Exit: Call::invoke()
+2013-12-06 11:51:40,208 DEBUG org.apache.axis.SOAPPart:661 - Enter: SOAPPart::getAsSOAPEnvelope()
+2013-12-06 11:51:40,208 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(currForm)
+2013-12-06 11:51:40,208 DEBUG org.apache.axis.SOAPPart:662 - current form is FORM_SOAPENVELOPE
+2013-12-06 11:51:40,210 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,210 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.EnvelopeHandler@26d66426
+2013-12-06 11:51:40,211 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(http://www.u.com.my/, addNewPortalUserResponse)
+2013-12-06 11:51:40,211 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,211 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.message.RPCHandler@45490eb5
+2013-12-06 11:51:40,212 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,212 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(http://www.u.com.my/, return)
+2013-12-06 11:51:40,213 DEBUG org.apache.axis.message.RPCHandler:125 - Enter: RPCHandler.onStartChild()
+2013-12-06 11:51:40,213 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(typeFromAttr00)
+2013-12-06 11:51:40,214 DEBUG org.apache.axis.message.RPCHandler:169 - Type from attributes is:  null
+2013-12-06 11:51:40,216 DEBUG org.apache.axis.message.RPCHandler:303 - Exit: RPCHandler.onStartChild()
+2013-12-06 11:51:40,217 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,217 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.encoding.ser.BeanDeserializer@688c4a77
+2013-12-06 11:51:40,218 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,219 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, RequestID)
+2013-12-06 11:51:40,227 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,227 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.encoding.ser.SimpleDeserializer@7eb1cc87
+2013-12-06 11:51:40,227 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,228 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, RequestID)
+2013-12-06 11:51:40,228 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,229 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.encoding.ser.SimpleDeserializer@7eb1cc87
+2013-12-06 11:51:40,229 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,230 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value 111 in target org.apache.axis.encoding.ser.BeanPropertyTarget@73c6641
+2013-12-06 11:51:40,230 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,231 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value 111 in target org.apache.axis.encoding.CallbackTarget@e5d391d
+2013-12-06 11:51:40,231 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,231 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,232 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, StatusCode)
+2013-12-06 11:51:40,233 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,234 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.encoding.ser.SimpleDeserializer@34d507e9
+2013-12-06 11:51:40,234 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,234 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, StatusCode)
+2013-12-06 11:51:40,235 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,235 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.encoding.ser.SimpleDeserializer@34d507e9
+2013-12-06 11:51:40,236 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,236 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value 0 in target org.apache.axis.encoding.ser.BeanPropertyTarget@dfa6d18
+2013-12-06 11:51:40,237 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,237 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value 0 in target org.apache.axis.encoding.CallbackTarget@341049d3
+2013-12-06 11:51:40,237 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,238 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,238 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, ErrorMessage)
+2013-12-06 11:51:40,238 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,239 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.encoding.ser.SimpleDeserializer@7eb1cc87
+2013-12-06 11:51:40,239 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,239 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, ErrorMessage)
+2013-12-06 11:51:40,240 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,240 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.encoding.ser.SimpleDeserializer@7eb1cc87
+2013-12-06 11:51:40,241 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,241 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value Success in target org.apache.axis.encoding.ser.BeanPropertyTarget@195ed659
+2013-12-06 11:51:40,241 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,242 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value Success in target org.apache.axis.encoding.CallbackTarget@214a7a12
+2013-12-06 11:51:40,242 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,243 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,243 DEBUG org.apache.axis.encoding.DeserializationContext:1003 - Enter: DeserializationContext::startElement(java:com.ericsson.umobileportal.wsserver.ws.data, TransactionId)
+2013-12-06 11:51:40,243 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2013-12-06 11:51:40,244 DEBUG org.apache.axis.encoding.DeserializationContext:796 - Pushing handler org.apache.axis.encoding.ser.SimpleDeserializer@7eb1cc87
+2013-12-06 11:51:40,244 DEBUG org.apache.axis.encoding.DeserializationContext:1067 - Exit: DeserializationContext::startElement()
+2013-12-06 11:51:40,244 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(java:com.ericsson.umobileportal.wsserver.ws.data, TransactionId)
+2013-12-06 11:51:40,245 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,245 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.encoding.ser.SimpleDeserializer@7eb1cc87
+2013-12-06 11:51:40,246 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,246 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value 111 in target org.apache.axis.encoding.ser.BeanPropertyTarget@5e2b323e
+2013-12-06 11:51:40,247 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,247 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value 111 in target org.apache.axis.encoding.CallbackTarget@65efb4be
+2013-12-06 11:51:40,248 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.MessageElement:return
+2013-12-06 11:51:40,248 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,248 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(http://www.u.com.my/, return)
+2013-12-06 11:51:40,249 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,249 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.encoding.ser.BeanDeserializer@688c4a77
+2013-12-06 11:51:40,250 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2013-12-06 11:51:40,250 DEBUG org.apache.axis.encoding.DeserializerImpl:251 - Set value data.ws.wsserver.umobileportal.ericsson.com.Response@f3ef5406 in target org.apache.axis.message.RPCParamTarget@5c435a3a
+2013-12-06 11:51:40,251 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.RPCElement:addNewPortalUserResponse
+2013-12-06 11:51:40,251 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,251 DEBUG org.apache.axis.encoding.DeserializationContext:1078 - Enter: DeserializationContext::endElement(http://www.u.com.my/, addNewPortalUserResponse)
+2013-12-06 11:51:40,252 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2013-12-06 11:51:40,252 DEBUG org.apache.axis.encoding.DeserializationContext:829 - Popping handler org.apache.axis.message.RPCHandler@45490eb5
+2013-12-06 11:51:40,253 DEBUG org.apache.axis.i18n.ProjectResourceBundle:72 - org.apache.axis.i18n.resource::handleGetObject(setProp00)
+2013-12-06 11:51:40,253 DEBUG org.apache.axis.message.RPCHandler:317 - Setting MessageContext property in RPCHandler.endElement().
+2013-12-06 11:51:40,253 DEBUG org.apache.axis.encoding.DeserializationContext:1106 - Popped element stack to org.apache.axis.message.SOAPBody:Body
+2013-12-06 11:51:40,254 DEBUG org.apache.axis.encoding.DeserializationContext:1107 - Exit: DeserializationContext::endElement()
+2013-12-06 11:51:40,254 DEBUG org.apache.axis.client.Call:2594 - Exit: Call::invoke(RPCElement)
+2013-12-06 11:51:40,255 DEBUG org.apache.axis.client.Call:2369 - Exit: Call::invoke(ns, meth, args)
+2013-12-06 11:51:40,255 DEBUG org.apache.axis.client.Call:1816 - axis.Call.invoke: 473 {http://www.u.com.my/}addNewPortalUser
+2013-12-06 11:51:40,258 DEBUG org.apache.commons.beanutils.BeanUtilsBean:246 - BeanUtils.copyProperties(com.ericsson.ema.downstream.bean.ResponseBean@7ae35bb7, data.ws.wsserver.umobileportal.ericsson.com.Response@f3ef5406)
+2013-12-06 11:51:40,261 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'String' value 'Success' to type 'String'
+2013-12-06 11:51:40,262 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'Integer' value '0' to type 'Integer'
+2013-12-06 11:51:40,263 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:149 -     No conversion required, value is already a Integer
+2013-12-06 11:51:40,263 DEBUG org.apache.commons.beanutils.converters.AbstractConverter:127 - Converting 'String' value '111' to type 'String'
+2013-12-06 11:51:40,264  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:86 - Response: 
+RESP:ErrorCode=0,ErrorDescription=Success
+2013-12-06 11:51:40,264  INFO com.ericsson.ema.downstream.webpsub.DemoJavalink:96 - disconnect()

@@ -1,0 +1,14 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap-env:Header>
+		<sessionId>%s</sessionId>
+		<transactionId>555</transactionId>
+	</soap-env:Header>
+		<soap-env:Body>
+			<Delete>
+				<MOType>subscriber</MOType>
+				<MOId>
+					<MSISDN>60112666777</MSISDN>
+				</MOId>
+			</Delete>
+		</soap-env:Body>
+</soap-env:Envelope>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="WebpJavaLink" basedir=".">
+	<property file="build.properties"/>
+	<property environment="env"/>
+	
+	<target name="echo" description="view version">
+			<echo message="java version: ${java.version}"/>
+			<echo message="ant version: ${ant.version}"/>
+	</target>
+	
+	
+	<target name="initialize" description="initialize properties">
+		<property location="${basedir}/src" name="src.dir"/>
+		<property location="${basedir}/lib" name="lib.dir"/>
+		<property location="${home}" name="home.dir"/>
+		<property location="${home}/${home.archive}" name="archive.dir"/>
+		<property location="${home}/${home.dist}" name="dist.dir"/>
+	</target>
+	
+	
+	<target name="clean" description="delete">
+		<delete dir="${archive.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+	
+	<target name="makedir" depends="initialize" description="creating directory">
+		<mkdir dir="${home.dir}"/>
+		<mkdir dir="${archive.dir}"/>
+		<mkdir dir="${dist.dir}"/>
+	</target>	
+	
+	<path id="libs.project">
+		   <fileset dir="${basedir}/lib" includes="*.jar"/>
+	</path>
+	
+	<path id="project.classpath">
+		<pathelement location="${src.dir}"/> 
+		<pathelement location="${libs.project}"/> 
+	</path>
+	
+	<target name="compile" description="compile java file">
+		<javac srcdir="${src.dir}" destdir="${archive.dir}" 
+			 	debug="on" optimize="off" deprecation="off" includeantruntime="false">
+			
+			<classpath>
+				<path refid="libs.project" />
+			</classpath>
+			<classpath>
+			   <path refid="project.classpath" />
+			</classpath>
+			 				      	
+		</javac>
+	</target>
+	
+	<target name="copy" depends="compile" description="copy file">
+		
+		
+	</target>
+	
+	
+	<target name="compress" depends="compile"> 
+		<jar destfile="${dist.dir}/${project.name}.jar" basedir="${archive.dir}">
+			<manifest>
+                <attribute name="Main-Class" value="com.ericsson.ema.downstream.webpsub.TestDemoJavalink"/>
+            	<attribute name="Class-Path" value="lib/EmaDownStream.jar lib/apache-jakarta-commons-httpclient.jar lib/apache-commons-logging.jar lib/log4j-1.2.15.jar lib/axis.jar lib/commons-discovery-0.2.jar lib/javax.wsdl_1.6.2.v201005080631.jar lib/jaxrpc.jar lib/saaj.jar lib/commons-beanutils-1.8.3.jar"/>
+            </manifest>
+		</jar>	
+	</target>
+	
+	
+	<target name="move" description="moving">
+			<copy todir="C:\Application\WEBP">
+				<fileset dir="${dist.dir}" includes="${project.name}.jar" />
+			</copy>
+			
+		<!--	<copy todir="E:/SMSC_SMS/System Configuration">
+				<fileset dir="${basedir}/config" includes="log4j.xml" />
+			</copy>
+		-->
+	</target>	
+	
+	
+	
+</project>	

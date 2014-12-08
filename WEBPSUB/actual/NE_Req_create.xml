@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<addNewPortalUser xmlns="http://www.u.com.my/">
+			<request>
+				<ns1:RequestID xmlns:ns1="java:com.ericsson.umobileportal.wsserver.ws.data">334433</ns1:RequestID>
+				<ns2:Msisdn xmlns:ns2="java:com.ericsson.umobileportal.wsserver.ws.data">60112000002</ns2:Msisdn>
+			</request>
+		</addNewPortalUser>
+	</soapenv:Body>
+</soapenv:Envelope>

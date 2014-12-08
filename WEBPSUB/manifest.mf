@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 20.45-b01 (Sun Microsystems Inc.)
+Main-Class: com.ericsson.ema.downstream.webpsub.TestDemoJavalink
+Class-Path: lib/EmaDownStream.jar lib/apache-jakarta-commons-httpclien
+ t.jar lib/apache-commons-logging.jar lib/log4j-1.2.15.jar lib/axis.ja
+ r lib/commons-discovery-0.2.jar lib/javax.wsdl_1.6.2.v201005080631.ja
+ r lib/jaxrpc.jar lib/saaj.jar lib/commons-beanutils-1.8.3.jar
+

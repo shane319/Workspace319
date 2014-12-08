@@ -1,0 +1,80 @@
+How to build and deploy zhlr javalink.
+
+As user sogadm.
+
+1. Chdir to /home/sogadm/kc/zhlr_jl/.
+
+    L28tema1:~> cd kc/zhlr_jl/
+
+
+2. Execute /home/sogadm/kc/bin/ant to build the jar file.
+
+    L28tema1:~/kc/zhlr_jl> ../bin/ant 
+    __________________________________________________________
+    Buildfile: /home/sogadm/kc/zhlr_jl/build.xml
+
+    clean:
+       [delete] Deleting directory /home/sogadm/kc/zhlr_jl/dist
+       [delete] Deleting directory /home/sogadm/kc/zhlr_jl/bin
+
+    init:
+	 [echo] Building ZHLR SUB
+	[mkdir] Created dir: /home/sogadm/kc/zhlr_jl/bin
+	[mkdir] Created dir: /home/sogadm/kc/zhlr_jl/dist
+
+    compile:
+	[javac] Compiling 2 source files to /home/sogadm/kc/zhlr_jl/bin
+	  [jar] Building jar: /home/sogadm/kc/zhlr_jl/dist/HlrJavaLink.jar
+
+    justdist:
+	  [jar] Building jar: /home/sogadm/kc/zhlr_jl/dist/HlrJavaLink.jar
+
+    dist:
+
+    BUILD SUCCESSFUL
+    Total time: 1 second
+    __________________________________________________________
+
+
+3. Copy HlrJavaLink.jar in subdir dist/ into /var/sog/sdk/downstream/java/ZHLR
+   Must be root, so jush ssh and gives root password: 'root000'
+
+    L28tema1:~/kc/zhlr_jl> ls -l dist/HlrJavaLink.jar 
+    __________________________________________________________
+    -rw-r--r-- 1 sogadm sog 8677 2013-09-18 10:34 dist/HlrJavaLink.jar
+
+    L28tema1:~/kc/zhlr_jl> scp dist/HlrJavaLink.jar root@localhost:/var/sog/sdk/downstream/java/ZHLR/
+    __________________________________________________________
+    Password: 
+    HlrJavaLink.jar                100% 8677     8.5KB/s   00:00    
+
+
+4. Verify the jar file is in /var/sog/sdk/downstream/ZHLR/.
+
+    L28tema1:~/kc/zhlr_jl> ls -l /var/sog/sdk/downstream/java/ZHLR/HlrJavaLink.jar 
+    __________________________________________________________
+    -rwxr-xr-x 1 root root 8677 2013-09-18 10:36 /var/sog/sdk/downstream/java/ZHLR/HlrJavaLink.jar
+
+
+5. Verify the jar file in ZHLR/ is symbolic link to ZAUC/
+
+    L28tema1:~/kc/zhlr_jl> ls -l /var/sog/sdk/downstream/java/ZAUC/HlrJavaLink.jar 
+    __________________________________________________________
+    lrwxrwxrwx 1 root root 23 2013-08-21 12:06 /var/sog/sdk/downstream/java/ZAUC/HlrJavaLink.jar ->
+			 ../ZHLR/HlrJavaLink.jar
+
+
+6. Kill the fsc.linkmanager process
+
+    L28tema1:~/kc/zhlr_jl> ps -ef |grep fsc.linkmanager |grep -v grep | awk '{print $2, $NF}'
+    __________________________________________________________
+    1618 com.ericsson.ema.fsc.linkmanager.javalinkhost.JavaLinkHost
+
+    L28tema1:~/kc/zhlr_jl> kill 1618
+
+
+7. Verify the fsc.linkmanager is automatically restarted.
+
+    L28tema1:~/kc/zhlr_jl> ps -ef |grep fsc.linkmanager |grep -v grep | awk '{print $2, $NF}'
+    __________________________________________________________
+    10332 com.ericsson.ema.fsc.linkmanager.javalinkhost.JavaLinkHost

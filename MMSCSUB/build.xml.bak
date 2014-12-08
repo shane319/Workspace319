@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="FSC lpDemoJavalink - Ant build script" default="all">
+
+    <property environment="env" />
+    <property name="jdk.home" value="${env.JAVA_HOME}" />
+
+    <property name="project.dir" value="." />
+    <property name="project.source" value="${project.dir}/src" />
+
+    <property name="destination.dir" value="_${env.MACS_TARGET}" />
+    <property name="link.name" value="DemoJavalink" />
+    <property name="jar.filename" value="${link.name}.jar" />
+
+    <property name="temp.dir" value="tmp" />
+    <property name="temp.src" value="${temp.dir}/src" />
+    <property name="temp.classes" value="${temp.dir}/classes" />
+
+    <property name="output.dir" value="output" />
+	<property name="target.os" value="solaris" />
+
+    <path id="project.class.path">
+        <pathelement location="${env.PRODUCTHOME}/opt/fsc/lpjavalink/1.0_${env.MACS_TARGET}/classes/" />
+        <!--Add additional clearcase jar library here-->
+    </path>
+
+    <path id="eclipse.project.class.path">
+        <pathelement location="lib/EmaDownStream.jar" />
+        <!--Add additional eclipse project jar library here-->
+    </path>
+
+    <target name="showvariables" description="Building using these variables:">
+        <echo message="java_home        = ${jdk.home}" />
+        <echo message="destination.dir  = ${destination.dir}" />
+        <echo message="jar.filename     = ${jar.filename}" />
+        <echo message="lib              = ${project.dir}/lib" />
+    </target>
+
+    <target name="init" description="Initializing" depends="showvariables">
+        <mkdir dir="${destination.dir}" />
+        <mkdir dir="${temp.dir}" />
+        <mkdir dir="${temp.classes}" />
+        <delete file="${destination.dir}/${jar.filename}" />
+    </target>
+
+    <target name="init-eclipse" description="Initializing">
+        <mkdir dir="${temp.dir}" />
+        <mkdir dir="${temp.classes}" />
+        <mkdir dir="${output.dir}" />
+        <delete file="${output.dir}/${jar.filename}" />
+    </target>
+
+    <target name="compile" depends="init" description="Compiling java files">
+        <javac destdir="${temp.classes}" srcdir="${project.source}">
+            <classpath refid="project.class.path" />
+        </javac>
+    </target>
+
+    <target name="compile-eclipse" depends="init-eclipse" description="Compiling java files">
+        <javac destdir="${temp.classes}" srcdir="${project.source}" excludes="**/Test${link.name}.java">
+            <classpath refid="eclipse.project.class.path" />
+        </javac>
+    </target>
+
+    <target name="makejar" depends="compile">
+        <jar jarfile="${destination.dir}/${jar.filename}" basedir="${temp.classes}" />
+    </target>
+
+    <target name="makejar-eclipse" depends="compile-eclipse">
+        <jar jarfile="${output.dir}/${jar.filename}" basedir="${temp.classes}" />
+    </target>
+
+    <target name="clean" description="Cleaning up">
+        <delete includeEmptyDirs="true">
+            <fileset dir="${temp.dir}" />
+        </delete>
+    </target>
+
+    <property name="buildnr.file" value="build.number" />
+    
+    <property name="fsc.prefix" value="FSC" />
+    <!-- need get from component.nfo -->
+    <property name="lp.prefix" value="Lp" />
+    <property name="component.name" value="${lp.prefix}${link.name}" />
+    <!-- need get from component.nfo -->
+    <property name="version" value="1.0" />
+    <!-- need get from component.nfo -->
+    <property name="tar.prefix" value="${fsc.prefix}-${lp.prefix}" />
+
+    <buildnumber file="${buildnr.file}" />
+
+    <property name="nfo.filename" value="component.nfo" />
+    <property name="mf.filename" value="manifest.mf" />
+    <property name="tar.debugnfodir" value="${fsc.prefix}/${lp.prefix}${link.name}/${version}/${build.number}/debug" />
+    <property name="tar.debugjardir" value="${tar.debugnfodir}/lib/${link.name}" />
+    <property name="tar.fastnfodir" value="${fsc.prefix}/${lp.prefix}${link.name}/${version}/${build.number}/fast" />
+    <property name="tar.fastjardir" value="${tar.fastnfodir}/lib/${link.name}" />
+
+    <!-- PACKAGE_TAR -->
+    <target name="maketar_debug" description="PACKAGE_TAR Solaris debug version">
+        <antcall target="makejar-eclipse" />
+        <mkdir dir="${output.dir}/${tar.debugjardir}" />
+        <copy file="${nfo.filename}" todir="${output.dir}/${tar.debugnfodir}" />
+        <copy file="${mf.filename}" todir="${output.dir}/${tar.debugjardir}" />
+        <copy file="${output.dir}/${jar.filename}" todir="${output.dir}/${tar.debugjardir}" />
+        <tar longfile="gnu" destfile="${output.dir}/${fsc.prefix}-${lp.prefix}${link.name}-${version}-${build.number}-debug-${target.os}.tar">
+            <tarfileset dir="${output.dir}/${fsc.prefix}" prefix="${fsc.prefix}">
+            </tarfileset>
+        </tar>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${output.dir}/${fsc.prefix}" />
+        </delete>
+        <antcall target="clean" />
+    </target>
+
+    <target name="maketar_fast" description="PACKAGE_TAR Solaris fast version">
+        <antcall target="makejar-eclipse" />
+        <mkdir dir="${output.dir}/${tar.fastjardir}" />
+        <copy file="${nfo.filename}" todir="${output.dir}/${tar.fastnfodir}" />
+        <copy file="${mf.filename}" todir="${output.dir}/${tar.fastjardir}" />
+        <copy file="${output.dir}/${jar.filename}" todir="${output.dir}/${tar.fastjardir}" />
+        <tar longfile="gnu" destfile="${output.dir}/${fsc.prefix}-${lp.prefix}${link.name}-${version}-${build.number}-fast-${target.os}.tar">
+            <tarfileset dir="${output.dir}/${fsc.prefix}" prefix="${fsc.prefix}">
+            </tarfileset>
+        </tar>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${output.dir}/${fsc.prefix}" />
+        </delete>
+        <antcall target="clean" />
+    </target>
+    <!-- PACKAGE_TAR end -->
+	
+    <target name="maketar_linux_debug" description="PACKAGE_TAR Linux Debug Version">
+        <antcall target="maketar_debug">
+            <param name="target.os" value="linux"/>
+        </antcall>
+    </target>
+
+    <target name="maketar_linux_fast" description="PACKAGE_TAR Linux Debug Version">
+        <antcall target="maketar_fast">
+            <param name="target.os" value="linux"/>
+        </antcall>
+    </target>
+
+    <target name="all" depends="makejar, clean" />
+    <target name="dist" depends="all" />
+    <target name="test" depends="all" />
+    
+    <target name="all-eclipse" depends="makejar-eclipse, clean" />
+    <target name="maketar" depends="maketar_debug, maketar_fast" />
+
+</project>

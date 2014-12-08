@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mml>
+	<RequestData>
+		<TxnType>suspendSubscriber</TxnType>
+		<Channel>5040</Channel>
+		<PersonalPK>1</PersonalPK>
+		<TransactionId>TR1110000202020</TransactionId>
+		<Msisdn>60182345768</Msisdn>
+	</RequestData>
+</mml>

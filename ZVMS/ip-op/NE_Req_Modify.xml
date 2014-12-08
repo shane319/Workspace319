@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoa
+.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	<soapenv:Body>
+		<ModifyUserReqt xmlns="vms">
+			<BoxNumber>13345678920</BoxNumber>
+			<OperID>admin</OperID>
+			<OperPwd>
+				admin
+			</OperPd>
+				<IDNumber>133123123123123</IDNumber>
+		</ModifyUserReqt>
+	</soapenv:Body>
+</soapenv:Envelope>

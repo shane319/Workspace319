@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<definitions name="UmobilePortalServiceDefinitions"
+	targetNamespace="http://www.u.com.my/" xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:s0="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wsswssecurity-
+utility-1.0.xsd"
+	xmlns:s1="http://www.u.com.my/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+	<wsp:UsingPolicy xmlns:n1="http://schemas.xmlsoap.org/wsdl/"
+		n1:Required="true" />
+
+	<wsp:Policy s0:Id="Auth.xml">
+
+		<wssp:Identity xmlns:wssp="http://www.bea.com/wls90/security/policy">
+
+			<wssp:SupportedTokens>
+
+				<wssp:SecurityToken
+					TokenType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-
+1.0#UsernameToken">
+					<wssp:UsePassword
+						Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-
+1.0#PasswordText" />
+				</wssp:SecurityToken>
+			</wssp:SupportedTokens>
+		</wssp:Identity>
+	</wsp:Policy>
+
+	<types>
+
+		<xs:schema attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="http://www.u.com.my/"
+			xmlns:s0="http://www.u.com.my/" xmlns:s1="http://schemas.xmlsoap.org/wsdl/soap/"
+			xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+			<xs:element name="changePortalUserPassword">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="request" type="java:Request"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="changePortalUserPasswordResponse">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="return" type="java:Response"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="deletePortalUser">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="request" type="java:Request"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="deletePortalUserResponse">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="return" type="java:Response"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="echo">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="request" type="java:Request"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="echoResponse">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="return" type="java:Response"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="addNewPortalUser">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="request" type="java:Request"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="addNewPortalUserResponse">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="return" type="java:Response"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="queryUserProfile">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="request" type="java:QueryUserProfileRequest"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="queryUserProfileResponse">
+
+				<xs:complexType>
+
+					<xs:sequence>
+						<xs:element name="return" type="java:QueryUserProfileResponse"
+							xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+
+		<xs:schema attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="java:com.ericsson.umobileportal.wsserver.ws.data"
+			xmlns:s0="http://www.u.com.my/" xmlns:s1="http://schemas.xmlsoap.org/wsdl/soap/"
+			xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+			<xs:complexType name="QueryUserProfileResponse">
+
+				<xs:complexContent>
+
+					<xs:extension base="java:Response"
+						xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data">
+
+						<xs:sequence>
+							<xs:element minOccurs="1" name="PinFlag" nillable="true"
+								type="xs:int" />
+							<xs:element minOccurs="1" name="UserStatus" nillable="true"
+								type="xs:int" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+
+			<xs:complexType name="Response">
+
+				<xs:complexContent>
+
+					<xs:extension base="java:Message"
+						xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data">
+
+						<xs:sequence>
+							<xs:element minOccurs="1" name="StatusCode" nillable="true"
+								type="xs:int" />
+							<xs:element minOccurs="1" name="ErrorMessage"
+								nillable="true" type="xs:string" />
+							<xs:element minOccurs="1" name="TransactionId"
+								nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+
+			<xs:complexType name="Message">
+
+				<xs:sequence>
+					<xs:element minOccurs="1" name="RequestID" nillable="true"
+						type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="QueryUserProfileRequest">
+
+				<xs:complexContent>
+
+					<xs:extension base="java:Request"
+						xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data">
+
+						<xs:sequence>
+							<xs:element minOccurs="1" name="PinNumber" nillable="true"
+								type="xs:int" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+
+			<xs:complexType name="Request">
+
+				<xs:complexContent>
+
+					<xs:extension base="java:Message"
+						xmlns:java="java:com.ericsson.umobileportal.wsserver.ws.data">
+
+						<xs:sequence>
+							<xs:element minOccurs="1" name="Msisdn" nillable="true"
+								type="xs:string" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+		</xs:schema>
+	</types>
+
+	<message name="changePortalUserPassword">
+		<part element="s1:changePortalUserPassword" name="parameters" />
+	</message>
+
+	<message name="changePortalUserPasswordResponse">
+		<part element="s1:changePortalUserPasswordResponse" name="parameters" />
+	</message>
+
+	<message name="deletePortalUser">
+		<part element="s1:deletePortalUser" name="parameters" />
+	</message>
+
+	<message name="deletePortalUserResponse">
+		<part element="s1:deletePortalUserResponse" name="parameters" />
+	</message>
+
+	<message name="echo">
+		<part element="s1:echo" name="parameters" />
+	</message>
+
+	<message name="echoResponse">
+		<part element="s1:echoResponse" name="parameters" />
+	</message>
+
+	<message name="addNewPortalUser">
+		<part element="s1:addNewPortalUser" name="parameters" />
+	</message>
+
+	<message name="addNewPortalUserResponse">
+		<part element="s1:addNewPortalUserResponse" name="parameters" />
+	</message>
+
+	<message name="queryUserProfile">
+		<part element="s1:queryUserProfile" name="parameters" />
+	</message>
+
+	<message name="queryUserProfileResponse">
+		<part element="s1:queryUserProfileResponse" name="parameters" />
+	</message>
+
+	<portType name="UmobilePortalPortType">
+
+		<operation name="changePortalUserPassword" parameterOrder="parameters">
+			<input message="s1:changePortalUserPassword" />
+			<output message="s1:changePortalUserPasswordResponse" />
+		</operation>
+
+		<operation name="deletePortalUser" parameterOrder="parameters">
+			<input message="s1:deletePortalUser" />
+			<output message="s1:deletePortalUserResponse" />
+		</operation>
+
+		<operation name="echo" parameterOrder="parameters">
+			<input message="s1:echo" />
+			<output message="s1:echoResponse" />
+		</operation>
+
+		<operation name="addNewPortalUser" parameterOrder="parameters">
+			<input message="s1:addNewPortalUser" />
+			<output message="s1:addNewPortalUserResponse" />
+		</operation>
+
+		<operation name="queryUserProfile" parameterOrder="parameters">
+			<input message="s1:queryUserProfile" />
+			<output message="s1:queryUserProfileResponse" />
+		</operation>
+	</portType>
+
+	<binding name="UmobilePortalServiceSoapBinding" type="s1:UmobilePortalPortType">
+		<s2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<operation name="changePortalUserPassword">
+			<s2:operation soapAction="" style="document" />
+
+			<input>
+				<s2:body parts="parameters" use="literal" />
+
+				<wsp:Policy>
+					<wsp:PolicyReference URI="#Auth.xml" />
+				</wsp:Policy>
+			</input>
+
+			<output>
+				<s2:body parts="parameters" use="literal" />
+			</output>
+		</operation>
+
+		<operation name="deletePortalUser">
+			<s2:operation soapAction="" style="document" />
+
+			<input>
+				<s2:body parts="pparameters" use="literal" />
+
+				<wsp:Policy>
+					<wsp:PolicyReference URI="#Auth.xml" />
+				</wsp:Policy>
+			</input>
+
+			<output>
+				<s2:body parts="parameters" use="literal" />
+			</output>
+		</operation>
+
+		<operation name="echo">
+			<s2:operation soapAction="" style="document" />
+
+			<input>
+				<s2:body parts="parameters" use="literal" />
+
+				<wsp:Policy>
+					<wsp:PolicyReference URI="#Auth.xml" />
+				</wsp:Policy>
+			</input>
+
+			<output>
+				<s2:body parts="parameters" use="literal" />
+			</output>
+		</operation>
+
+		<operation name="addNewPortalUser">
+			<s2:operation soapAction="" style="document" />
+
+			<input>
+				<s2:body parts="parameters" use="literal" />
+
+				<wsp:Policy>
+					<wsp:PolicyReference URI="#Auth.xml" />
+				</wsp:Policy>
+			</input>
+
+			<output>
+				<s2:body parts="parameters" use="literal" />
+			</output>
+		</operation>
+
+		<operation name="queryUserProfile">
+			<s2:operation soapAction="" style="document" />
+
+			<input>
+				<s2:body parts="parameters" use="literal" />
+
+				<wsp:Policy>
+					<wsp:PolicyReference URI="#Auth.xml" />
+				</wsp:Policy>
+			</input>
+
+			<output>
+				<s2:body parts="parameters" use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+	<service name="UmobilePortalService">
+
+		<port binding="s1:UmobilePortalServiceSoapBinding" name="UmobilePortalServicePort">
+			<s2:address
+				location="http://10.30.25.62:8090/umobilePortal/UmobilePortalService" />
+		</port>
+	</service>
+</definitions>

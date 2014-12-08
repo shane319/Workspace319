@@ -1,0 +1,53 @@
+# **********************************************************************
+#             File : package.nfo
+#        Author(s) : qmiwang
+#          Created : 2007-05-25
+# 
+# 
+# Copyright (c) 2000 Telefonaktiebolaget LM Ericsson, Sweden.
+# All rights reserved.
+# The Copyright to the computer program(s) herein is the property of
+# Telefonaktiebolaget LM Ericsson, Sweden.
+# The program(s) may be used and/or copied with the written permission
+# from Telefonaktiebolaget LM Ericsson or in accordance with the terms
+# and conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+#
+# DESCRIPTION
+#
+#
+# VERSION
+#  $$Id: package.nfo,v 1.1 2000/08/25 14:26:25 epkboli Exp $$
+#
+# **********************************************************************
+# 
+---DIR---
+lib                                             755
+lib/DemoJavalink                                	755
+
+---ADD---
+
+# *** BIN ***
+
+ 
+
+# *** JAR ***
+DemoJavalink.jar	      		lib/DemoJavalink/DemoJavalink.jar   		644
+
+
+# *** LIB ***
+
+
+---LINKS---
+
+
+
+# **********************************************************************
+# REVISION HISTORY
+#
+#  $$Log: package.nfo,v $$
+#  Revision 1.1  2000/08/25 14:26:25  epkboli
+#  First revision.
+#
+# **********************************************************************

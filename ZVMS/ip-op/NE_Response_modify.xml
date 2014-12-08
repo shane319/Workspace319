@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soap:Body>
+		<ns1:ModifyUserResponse xmlns:ns1="vms">
+			<ns1:out>10</ns1:out>
+		</ns1:ModifyUserResponse>
+	</soap:Body>
+</soap:Envelope>

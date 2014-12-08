@@ -1,0 +1,26 @@
+<soapenv:Envelope targetNamespace="http://ws.mrbt.genico.ngc.com.my"
+	xmlns:tns="http://ws.mrbt.genico.ngc.com.my" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<soapenv:Body>
+		<activateSubscriber xmlns="http://ws.mrbt.genico.ngc.com.my">
+			<hlrResponse>0</hlrResponse>
+			<msisdn>60183835539</msisdn>
+		</activateSubscriber>
+	</soapenv:Body>
+</soapenv:Envelope>
+<soapenv:Envelope soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+	
+	<soapenv:Body>
+		<activateSubscriber xmlns="http://ws.mrbt.genico.ngc.com.my">
+			<hlrResponse>0</hlrResponse>
+			<msisdn>60183835539</msisdn>
+		</activateSubscriber>
+	</soapenv:Body>
+</soapenv:Envelope>

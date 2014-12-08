@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mml>
+	<RequestData>
+		<Operation>CreateUser</Operation>
+		
+		<Operid>admin</Operid>
+		<Operpwd>admin</Operpwd>
+		<Boxnumber>13345678920</Boxnumber>
+		<Idnumber>133123123123123</Idnumber>
+	</RequestData>
+</mml>

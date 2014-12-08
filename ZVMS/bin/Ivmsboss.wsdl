@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <wsdl:definitions targetNamespace="vms" xmlns:tns="vms" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:ns1="http://mail.dto.op.web.ngmail.zte.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:types>
+            <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="vms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:element name="CreateUserReqt">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="BoxNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperID" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperPwd" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="ServiceClass" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Language" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Password" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="EntryAuthen" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MessageNotify" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="UserName" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Email" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="ZipCode" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="IDNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MWNType" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MWNDest" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="LDOperatorCode" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="TerminalType" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="BillingNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MMSDest" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="SMSNotifyPhone" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary1" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary2" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary3" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary4" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary5" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Usertype"   nillable="true" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="CreateUserResponse">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="resultcode" type="xsd:int"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="description" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="DeleteUserReqt">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="BoxNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperID" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperPwd" nillable="true" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="DeleteUserResponse">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="resultcode" type="xsd:int"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="description" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="QueryUserReqt">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="BoxNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperID" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperPwd" nillable="true" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="QueryUserResponse">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="resultcode" type="xsd:int"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="IDNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="LDOperatorCode" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MWNDest" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MWNType" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="email" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="entryAuthen" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="language" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="messageNotify" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="serviceClass" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="userName" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="userStatus" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="zipCode" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="TerminalType" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="BillingNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MMSDest" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="description" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Password" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="SMSNotifyPhone" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary1" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary2" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary3" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary4" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary5" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MCAservice" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="CMNservice" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Usertype"   nillable="true" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="ModifyUserReqt">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="BoxNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperID" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="OperPwd" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="UserStatus" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="ServiceClass" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Language" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Password" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="EntryAuthen" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MessageNotify" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="UserName" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Email" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="ZipCode" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="IDNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MWNType" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MWNDest" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="LDOperatorCode" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="TerminalType" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="BillingNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MMSDest" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="SMSNotifyPhone" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary1" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary2" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary3" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary4" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Secondary5" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="MCAservice" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="CMNservice" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="Usertype"   nillable="true" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="ModifyUserResponse">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="resultcode" type="xsd:int"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="description" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="QueryOperidReqt">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="BoxNumber" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="OperID" nillable="true" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="OperPwd" nillable="true" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="QueryOperidResponse">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="resultcode" type="xsd:int"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="OperID" type="xsd:string"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" name="description" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:schema>
+        </wsdl:types>
+        
+        <wsdl:message name="CreateUserRequest">
+            <wsdl:part name="parameters" element="tns:CreateUserReqt"/>
+        </wsdl:message>
+        
+        <wsdl:message name="CreateUserResponse">
+            <wsdl:part name="parameters" element="tns:CreateUserResponse"/>
+        </wsdl:message> 
+        
+        <wsdl:message name="ModifyUserRequest">
+            <wsdl:part name="parameters" element="tns:ModifyUserReqt"/>
+        </wsdl:message>
+        
+        <wsdl:message name="ModifyUserResponse">
+            <wsdl:part name="parameters" element="tns:ModifyUserResponse"/>
+        </wsdl:message>
+        
+        <wsdl:message name="QueryUserRequest">
+            <wsdl:part name="parameters" element="tns:QueryUserReqt"/>
+        </wsdl:message>
+        
+        <wsdl:message name="QueryUserResponse">
+            <wsdl:part name="parameters" element="tns:QueryUserResponse"/>
+        </wsdl:message>
+        
+        <wsdl:message name="DeleteUserRequest">
+            <wsdl:part name="parameters" element="tns:DeleteUserReqt"/>
+        </wsdl:message>
+        
+        <wsdl:message name="DeleteUserResponse">
+            <wsdl:part name="parameters" element="tns:DeleteUserResponse"/>
+        </wsdl:message>
+        
+        <wsdl:message name="QueryOperidRequest">
+            <wsdl:part name="parameters" element="tns:QueryOperidReqt"/>
+        </wsdl:message>
+        
+        <wsdl:message name="QueryOperidResponse">
+            <wsdl:part name="parameters" element="tns:QueryOperidResponse"/>
+        </wsdl:message>
+  
+        <wsdl:portType name="IvmsbossPortType">
+          <wsdl:operation name="CreateUser">
+            <wsdl:input name="CreateUserRequest" message="tns:CreateUserRequest"/>
+            <wsdl:output name="CreateUserResponse" message="tns:CreateUserResponse"/>
+          </wsdl:operation>
+	         
+          <wsdl:operation name="DeleteUser">
+            <wsdl:input name="DeleteUserRequest" message="tns:DeleteUserRequest"/>
+            <wsdl:output name="DeleteUserResponse" message="tns:DeleteUserResponse"/>
+          </wsdl:operation>
+	        
+          <wsdl:operation name="QueryUser">
+            <wsdl:input name="QueryUserRequest" message="tns:QueryUserRequest"/>
+            <wsdl:output name="QueryUserResponse" message="tns:QueryUserResponse"/>
+          </wsdl:operation>
+	        
+          <wsdl:operation name="ModifyUser">
+            <wsdl:input name="ModifyUserRequest" message="tns:ModifyUserRequest"/>
+            <wsdl:output name="ModifyUserResponse" message="tns:ModifyUserResponse"/>
+          </wsdl:operation>
+          
+          <wsdl:operation name="QueryUseroperid">
+            <wsdl:input name="QueryUseroperidRequest" message="tns:QueryOperidRequest"/>
+            <wsdl:output name="QueryUseroperidResponse" message="tns:QueryOperidResponse"/>
+          </wsdl:operation>
+	      
+        </wsdl:portType>
+  
+        <wsdl:binding name="IvmsbossHttpBinding" type="tns:IvmsbossPortType">
+          <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+          <wsdl:operation name="CreateUser">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="CreateUserRequest">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CreateUserResponse">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+          </wsdl:operation>
+	      
+          <wsdl:operation name="DeleteUser">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="DeleteUserRequest">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="DeleteUserResponse">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+          </wsdl:operation>
+	      
+          <wsdl:operation name="QueryUser">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="QueryUserRequest">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="QueryUserResponse">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+          </wsdl:operation>
+	      
+          <wsdl:operation name="ModifyUser">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="ModifyUserRequest">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ModifyUserResponse">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+          </wsdl:operation>
+          
+          <wsdl:operation name="QueryUseroperid">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="QueryUseroperidRequest">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="QueryUseroperidResponse">
+              <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+          </wsdl:operation>
+	      
+        </wsdl:binding>
+  
+        <wsdl:service name="Ivmsboss">
+          <wsdl:port name="IvmsbossHttpPort" binding="tns:IvmsbossHttpBinding">
+            <wsdlsoap:address location="http://10.130.81.67:9999/vmsboss/Ivmsboss"/>
+          </wsdl:port>
+        </wsdl:service>
+    </wsdl:definitions> 

@@ -1,0 +1,2 @@
+Class-PATH	DemoJavalink.jar 
+Class-Name	com.ericsson.ema.downstream.mrbtsub.DemoJavalink

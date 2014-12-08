@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 20.7-b02 (Sun Microsystems Inc.)
+Main-Class: com.ericsson.ema.downstream.javalink.TestHlrJavalink
+Class-Path: lib/EmaDownStream.jar lib/log4j-1.2.15.jar
+
