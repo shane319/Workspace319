@@ -17,6 +17,7 @@ public class MmlConstant {
 	public static final String PERSONAL_PK = "PersonalPK";
 	public static final String TRANSACTION_ID = "TransactionId";
 	public static final String MSISDN = "Msisdn";
+	public static final String NEW_MSISDN = "NewMsisdn";
 	public static final String HLR_RESP = "HlrResponse";
 	
 }

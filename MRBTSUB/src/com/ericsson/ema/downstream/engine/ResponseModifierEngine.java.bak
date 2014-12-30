@@ -50,9 +50,9 @@ public class ResponseModifierEngine implements JavaLinkEngine {
 		// TODO Auto-generated method stub
 		ResponseBean responseBean = null;
 		
-		//responseBean = new ResponseBean();
-		//responseBean.setResponse("RESP:ErrorCode=0,ErrorDescription=Success;");
-		BeanUtils.copyProperties(responseBean, (ResponseBean)rawResponse);
+		responseBean = new ResponseBean();
+		responseBean.setResponse("RESP:ErrorCode=0,ErrorDescription=Success;");
+		//BeanUtils.copyProperties(responseBean, (Response)rawResponse);
 		
 		return responseBean;
 	}

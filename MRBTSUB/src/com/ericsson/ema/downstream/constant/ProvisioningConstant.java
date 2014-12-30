@@ -32,6 +32,10 @@ public class ProvisioningConstant {
 	public static final String INVOKES_API_SUSPEND = "suspendSubscriber";
 	public static final String INVOKES_API_REACTIVE = "reactivateSubscriber";
 	
+	
+	//Integration with OnMobile, add change MSISDN method
+	public static final String INVOKES_API_CHANGE_MSISDN = "changeMsisdn";
+	
 	//Status constant
 	public static final String SUCCESS = "SUCCESS";
 	public static final String FAILED = "FAILED";

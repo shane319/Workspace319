@@ -50,10 +50,10 @@ public class ParseEngine implements JavaLinkEngine {
 
 	protected RequestBean dummyData() {
 		RequestBean requestBean = new RequestBean();
-		/*requestBean.in0 = "111222333555";
+		requestBean.in0 = "111222333555";
 		requestBean.in1 = 123456789;
 		requestBean.in2 = "abc";
-		requestBean.in3 = "aaaabbbbbcccc";*/
+		requestBean.in3 = "aaaabbbbbcccc";
 
 		requestBean.setMsisdn("1112223334445556");
 		requestBean.setRequestID("000000000");

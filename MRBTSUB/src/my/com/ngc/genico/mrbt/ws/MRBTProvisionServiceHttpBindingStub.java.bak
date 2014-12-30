@@ -1,0 +1,254 @@
+package my.com.ngc.genico.mrbt.ws;
+
+import java.net.URL;
+import java.rmi.RemoteException;
+import java.util.Enumeration;
+import java.util.Properties;
+import java.util.Vector;
+import javax.xml.namespace.QName;
+import org.apache.axis.AxisFault;
+import org.apache.axis.NoEndPointException;
+import org.apache.axis.client.Call;
+import org.apache.axis.client.Stub;
+import org.apache.axis.constants.Style;
+import org.apache.axis.constants.Use;
+import org.apache.axis.description.FaultDesc;
+import org.apache.axis.description.OperationDesc;
+import org.apache.axis.description.ParameterDesc;
+import org.apache.axis.encoding.DeserializerFactory;
+import org.apache.axis.encoding.XMLType;
+import org.apache.axis.encoding.ser.ArrayDeserializerFactory;
+import org.apache.axis.encoding.ser.ArraySerializerFactory;
+import org.apache.axis.encoding.ser.BeanDeserializerFactory;
+import org.apache.axis.encoding.ser.BeanSerializerFactory;
+import org.apache.axis.encoding.ser.EnumDeserializerFactory;
+import org.apache.axis.encoding.ser.EnumSerializerFactory;
+import org.apache.axis.encoding.ser.SimpleDeserializerFactory;
+import org.apache.axis.encoding.ser.SimpleListDeserializerFactory;
+import org.apache.axis.encoding.ser.SimpleListSerializerFactory;
+import org.apache.axis.encoding.ser.SimpleSerializerFactory;
+import org.apache.axis.soap.SOAPConstants;
+
+public class MRBTProvisionServiceHttpBindingStub extends Stub
+  implements MRBTProvisionService_PortType
+{
+  private Vector cachedSerClasses = new Vector();
+  private Vector cachedSerQNames = new Vector();
+  private Vector cachedSerFactories = new Vector();
+  private Vector cachedDeserFactories = new Vector();
+
+  static OperationDesc[] _operations = new OperationDesc[2];
+
+  private static void _initOperationDesc1()
+  {
+    OperationDesc oper = new OperationDesc();
+    oper.setName("deactivateSubscriber");
+    ParameterDesc param = new ParameterDesc(new QName("http://ws.mrbt.genico.ngc.com.my", "in0"), (byte)1, new QName("http://www.w3.org/2001/XMLSchema", "int"), Integer.TYPE, false, false);
+    oper.addParameter(param);
+    param = new ParameterDesc(new QName("http://ws.mrbt.genico.ngc.com.my", "in1"), (byte)1, new QName("http://www.w3.org/2001/XMLSchema", "string"), String.class, false, false);
+    param.setNillable(true);
+    oper.addParameter(param);
+    oper.setReturnType(XMLType.AXIS_VOID);
+    oper.setStyle(Style.WRAPPED);
+    oper.setUse(Use.LITERAL);
+    oper.addFault(new FaultDesc(new QName("http://ws.mrbt.genico.ngc.com.my", "WSProvisionException"), "my.com.ngc.genico.mrbt.ws.ProvisionFaultDetail", new QName("http://ws.mrbt.genico.ngc.com.my", "ProvisionFaultDetail"), true));
+
+    _operations[0] = oper;
+
+    oper = new OperationDesc();
+    oper.setName("activateSubscriber");
+    param = new ParameterDesc(new QName("http://ws.mrbt.genico.ngc.com.my", "in0"), (byte)1, new QName("http://www.w3.org/2001/XMLSchema", "int"), Integer.TYPE, false, false);
+    oper.addParameter(param);
+    param = new ParameterDesc(new QName("http://ws.mrbt.genico.ngc.com.my", "in1"), (byte)1, new QName("http://www.w3.org/2001/XMLSchema", "string"), String.class, false, false);
+    param.setNillable(true);
+    oper.addParameter(param);
+    oper.setReturnType(XMLType.AXIS_VOID);
+    oper.setStyle(Style.WRAPPED);
+    oper.setUse(Use.LITERAL);
+    oper.addFault(new FaultDesc(new QName("http://ws.mrbt.genico.ngc.com.my", "WSProvisionException"), "my.com.ngc.genico.mrbt.ws.ProvisionFaultDetail", new QName("http://ws.mrbt.genico.ngc.com.my", "ProvisionFaultDetail"), true));
+
+    _operations[1] = oper;
+  }
+
+  public MRBTProvisionServiceHttpBindingStub() throws AxisFault
+  {
+    this(null);
+  }
+
+  public MRBTProvisionServiceHttpBindingStub(URL endpointURL, javax.xml.rpc.Service service) throws AxisFault {
+    this(service);
+    this.cachedEndpoint = endpointURL;
+  }
+
+  public MRBTProvisionServiceHttpBindingStub(javax.xml.rpc.Service service) throws AxisFault {
+    if (service == null)
+      this.service = new org.apache.axis.client.Service();
+    else {
+      this.service = service;
+    }
+    ((org.apache.axis.client.Service)this.service).setTypeMappingVersion("1.2");
+
+    Class beansf = BeanSerializerFactory.class;
+    Class beandf = BeanDeserializerFactory.class;
+    Class enumsf = EnumSerializerFactory.class;
+    Class enumdf = EnumDeserializerFactory.class;
+    Class arraysf = ArraySerializerFactory.class;
+    Class arraydf = ArrayDeserializerFactory.class;
+    Class simplesf = SimpleSerializerFactory.class;
+    Class simpledf = SimpleDeserializerFactory.class;
+    Class simplelistsf = SimpleListSerializerFactory.class;
+    Class simplelistdf = SimpleListDeserializerFactory.class;
+    QName qName = new QName("http://ws.mrbt.genico.ngc.com.my", "ArrayOfString");
+    this.cachedSerQNames.add(qName);
+    Class cls = java.lang.String[].class;
+    this.cachedSerClasses.add(cls);
+    qName = new QName("http://www.w3.org/2001/XMLSchema", "string");
+    QName qName2 = new QName("http://ws.mrbt.genico.ngc.com.my", "string");
+    this.cachedSerFactories.add(new ArraySerializerFactory(qName, qName2));
+    this.cachedDeserFactories.add(new ArrayDeserializerFactory());
+
+    qName = new QName("http://ws.mrbt.genico.ngc.com.my", "ProvisionFaultDetail");
+    this.cachedSerQNames.add(qName);
+    cls = ProvisionFaultDetail.class;
+    this.cachedSerClasses.add(cls);
+    this.cachedSerFactories.add(beansf);
+    this.cachedDeserFactories.add(beandf);
+  }
+
+  protected Call createCall() throws RemoteException
+  {
+    try {
+      Call _call = super._createCall();
+
+      if (this.maintainSessionSet) {
+        _call.setMaintainSession(this.maintainSession);
+      }
+      if (this.cachedUsername != null) {
+        _call.setUsername(this.cachedUsername);
+      }
+      if (this.cachedPassword != null) {
+        _call.setPassword(this.cachedPassword);
+      }
+      if (this.cachedEndpoint != null) {
+        _call.setTargetEndpointAddress(this.cachedEndpoint);
+      }
+      if (this.cachedTimeout != null) {
+        _call.setTimeout(this.cachedTimeout);
+      }
+      if (this.cachedPortName != null) {
+        _call.setPortName(this.cachedPortName);
+      }
+      Enumeration keys = this.cachedProperties.keys();
+      while (keys.hasMoreElements()) {
+        String key = (String)keys.nextElement();
+        _call.setProperty(key, this.cachedProperties.get(key));
+      }
+
+      synchronized (this) {
+        if (firstCall())
+        {
+          _call.setEncodingStyle(null);
+          for (int i = 0; i < this.cachedSerFactories.size(); i++) {
+            Class cls = (Class)this.cachedSerClasses.get(i);
+            QName qName = (QName)this.cachedSerQNames.get(i);
+
+            Object x = this.cachedSerFactories.get(i);
+            if ((x instanceof Class)) {
+              Class sf = (Class)this.cachedSerFactories.get(i);
+
+              Class df = (Class)this.cachedDeserFactories.get(i);
+
+              _call.registerTypeMapping(cls, qName, sf, df, false);
+            }
+            else if ((x instanceof javax.xml.rpc.encoding.SerializerFactory)) {
+              org.apache.axis.encoding.SerializerFactory sf = (org.apache.axis.encoding.SerializerFactory)this.cachedSerFactories.get(i);
+
+              DeserializerFactory df = (DeserializerFactory)this.cachedDeserFactories.get(i);
+
+              _call.registerTypeMapping(cls, qName, sf, df, false);
+            }
+          }
+        }
+      }
+      return _call;
+    }
+    catch (Throwable _t) {
+      throw new AxisFault("Failure trying to get the Call object", _t);
+    }
+  }
+
+  public void deactivateSubscriber(int in0, String in1) throws RemoteException, ProvisionFaultDetail {
+    if (this.cachedEndpoint == null) {
+      throw new NoEndPointException();
+    }
+    Call _call = createCall();
+    _call.setOperation(_operations[0]);
+    _call.setUseSOAPAction(true);
+    _call.setSOAPActionURI("");
+    _call.setEncodingStyle(null);
+    _call.setProperty("sendXsiTypes", Boolean.FALSE);
+    _call.setProperty("sendMultiRefs", Boolean.FALSE);
+    _call.setSOAPVersion(SOAPConstants.SOAP11_CONSTANTS);
+    _call.setOperationName(new QName("http://ws.mrbt.genico.ngc.com.my", "deactivateSubscriber"));
+
+    setRequestHeaders(_call);
+    setAttachments(_call);
+    try { Object _resp = _call.invoke(new Object[] { new Integer(in0), in1 });
+
+      if ((_resp instanceof RemoteException)) {
+        throw ((RemoteException)_resp);
+      }
+      extractAttachments(_call);
+    } catch (AxisFault axisFaultException) {
+      if (axisFaultException.detail != null) {
+        if ((axisFaultException.detail instanceof RemoteException)) {
+          throw ((RemoteException)axisFaultException.detail);
+        }
+        if ((axisFaultException.detail instanceof ProvisionFaultDetail)) {
+          throw ((ProvisionFaultDetail)axisFaultException.detail);
+        }
+      }
+      throw axisFaultException;
+    }
+  }
+
+  public void activateSubscriber(int in0, String in1) throws RemoteException, ProvisionFaultDetail {
+    if (this.cachedEndpoint == null) {
+      throw new NoEndPointException();
+    }
+    Call _call = createCall();
+    _call.setOperation(_operations[1]);
+    _call.setUseSOAPAction(true);
+    _call.setSOAPActionURI("");
+    _call.setEncodingStyle(null);
+    _call.setProperty("sendXsiTypes", Boolean.FALSE);
+    _call.setProperty("sendMultiRefs", Boolean.FALSE);
+    _call.setSOAPVersion(SOAPConstants.SOAP11_CONSTANTS);
+    _call.setOperationName(new QName("http://ws.mrbt.genico.ngc.com.my", "activateSubscriber"));
+
+    setRequestHeaders(_call);
+    setAttachments(_call);
+    try { Object _resp = _call.invoke(new Object[] { new Integer(in0), in1 });
+
+      if ((_resp instanceof RemoteException)) {
+        throw ((RemoteException)_resp);
+      }
+      extractAttachments(_call);
+    } catch (AxisFault axisFaultException) {
+      if (axisFaultException.detail != null) {
+        if ((axisFaultException.detail instanceof RemoteException)) {
+          throw ((RemoteException)axisFaultException.detail);
+        }
+        if ((axisFaultException.detail instanceof ProvisionFaultDetail)) {
+          throw ((ProvisionFaultDetail)axisFaultException.detail);
+        }
+      }
+      throw axisFaultException;
+    }
+  }
+
+  static
+  {
+    _initOperationDesc1();
+  }
+}

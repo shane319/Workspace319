@@ -1,0 +1,13 @@
+package my.com.ngc.genico.mrbt.ws;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public abstract interface MRBTProvisionService_PortType extends Remote
+{
+  public abstract void deactivateSubscriber(int paramInt, String paramString)
+    throws RemoteException, ProvisionFaultDetail;
+
+  public abstract void activateSubscriber(int paramInt, String paramString)
+    throws RemoteException, ProvisionFaultDetail;
+}

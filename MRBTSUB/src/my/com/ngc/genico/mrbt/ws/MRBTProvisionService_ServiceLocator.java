@@ -22,7 +22,7 @@ public class MRBTProvisionService_ServiceLocator extends org.apache.axis.client.
     }
 
     // Use to get a proxy class for MRBTProvisionServiceHttpPort
-    private java.lang.String MRBTProvisionServiceHttpPort_address = "http://192.168.99.69:8080/genico-mrbt-ws/MRBTProvisionService";
+    private java.lang.String MRBTProvisionServiceHttpPort_address = "http://localhost:8080/genico-mrbt-ws-iat/MRBTProvisionService";
 
     public java.lang.String getMRBTProvisionServiceHttpPortAddress() {
         return MRBTProvisionServiceHttpPort_address;

@@ -1,0 +1,15 @@
+package my.com.ngc.genico.mrbt.ws;
+
+import java.net.URL;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceException;
+
+public abstract interface MRBTProvisionService_Service extends Service {
+	public abstract String getMRBTProvisionServiceHttpPortAddress();
+
+	public abstract MRBTProvisionService_PortType getMRBTProvisionServiceHttpPort()
+			throws ServiceException;
+
+	public abstract MRBTProvisionService_PortType getMRBTProvisionServiceHttpPort(
+			URL paramURL) throws ServiceException;
+}

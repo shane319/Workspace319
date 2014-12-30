@@ -1,0 +1,141 @@
+package my.com.ngc.genico.mrbt.ws;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.rmi.Remote;
+import java.util.HashSet;
+import java.util.Iterator;
+import javax.xml.namespace.QName;
+import javax.xml.rpc.ServiceException;
+import org.apache.axis.AxisFault;
+import org.apache.axis.EngineConfiguration;
+import org.apache.axis.client.Service;
+import org.apache.axis.client.Stub;
+
+public class MRBTProvisionService_ServiceLocator extends Service
+  implements MRBTProvisionService_Service
+{
+  private String MRBTProvisionServiceHttpPort_address = "http://localhost:8080/genico-mrbt-ws-iat/MRBTProvisionService";
+
+  private String MRBTProvisionServiceHttpPortWSDDServiceName = "MRBTProvisionServiceHttpPort";
+
+  private HashSet ports = null;
+
+  public MRBTProvisionService_ServiceLocator()
+  {
+  }
+
+  public MRBTProvisionService_ServiceLocator(EngineConfiguration config)
+  {
+    super(config);
+  }
+
+  public MRBTProvisionService_ServiceLocator(String wsdlLoc, QName sName) throws ServiceException {
+    super(wsdlLoc, sName);
+  }
+
+  public String getMRBTProvisionServiceHttpPortAddress()
+  {
+    return this.MRBTProvisionServiceHttpPort_address;
+  }
+
+  public String getMRBTProvisionServiceHttpPortWSDDServiceName()
+  {
+    return this.MRBTProvisionServiceHttpPortWSDDServiceName;
+  }
+
+  public void setMRBTProvisionServiceHttpPortWSDDServiceName(String name) {
+    this.MRBTProvisionServiceHttpPortWSDDServiceName = name;
+  }
+
+  public MRBTProvisionService_PortType getMRBTProvisionServiceHttpPort() throws ServiceException {
+    URL endpoint;
+    try {
+      endpoint = new URL(this.MRBTProvisionServiceHttpPort_address);
+    }
+    catch (MalformedURLException e) {
+      throw new ServiceException(e);
+    }
+    return getMRBTProvisionServiceHttpPort(endpoint);
+  }
+
+  public MRBTProvisionService_PortType getMRBTProvisionServiceHttpPort(URL portAddress) throws ServiceException {
+    try {
+      MRBTProvisionServiceHttpBindingStub _stub = new MRBTProvisionServiceHttpBindingStub(portAddress, this);
+      _stub.setPortName(getMRBTProvisionServiceHttpPortWSDDServiceName());
+      return _stub;
+    } catch (AxisFault e) {
+    }
+    return null;
+  }
+
+  public void setMRBTProvisionServiceHttpPortEndpointAddress(String address)
+  {
+    this.MRBTProvisionServiceHttpPort_address = address;
+  }
+
+  public Remote getPort(Class serviceEndpointInterface)
+    throws ServiceException
+  {
+    try
+    {
+      if (MRBTProvisionService_PortType.class.isAssignableFrom(serviceEndpointInterface)) {
+        MRBTProvisionServiceHttpBindingStub _stub = new MRBTProvisionServiceHttpBindingStub(new URL(this.MRBTProvisionServiceHttpPort_address), this);
+        _stub.setPortName(getMRBTProvisionServiceHttpPortWSDDServiceName());
+        return _stub;
+      }
+    }
+    catch (Throwable t) {
+      throw new ServiceException(t);
+    }
+    throw new ServiceException(new StringBuilder().append("There is no stub implementation for the interface:  ").append(serviceEndpointInterface == null ? "null" : serviceEndpointInterface.getName()).toString());
+  }
+
+  public Remote getPort(QName portName, Class serviceEndpointInterface)
+    throws ServiceException
+  {
+    if (portName == null) {
+      return getPort(serviceEndpointInterface);
+    }
+    String inputPortName = portName.getLocalPart();
+    if ("MRBTProvisionServiceHttpPort".equals(inputPortName)) {
+      return getMRBTProvisionServiceHttpPort();
+    }
+
+    Remote _stub = getPort(serviceEndpointInterface);
+    ((Stub)_stub).setPortName(portName);
+    return _stub;
+  }
+
+  public QName getServiceName()
+  {
+    return new QName("http://ws.mrbt.genico.ngc.com.my", "MRBTProvisionService");
+  }
+
+  public Iterator getPorts()
+  {
+    if (this.ports == null) {
+      this.ports = new HashSet();
+      this.ports.add(new QName("http://ws.mrbt.genico.ngc.com.my", "MRBTProvisionServiceHttpPort"));
+    }
+    return this.ports.iterator();
+  }
+
+  public void setEndpointAddress(String portName, String address)
+    throws ServiceException
+  {
+    if ("MRBTProvisionServiceHttpPort".equals(portName)) {
+      setMRBTProvisionServiceHttpPortEndpointAddress(address);
+    }
+    else
+    {
+      throw new ServiceException(new StringBuilder().append(" Cannot set Endpoint Address for Unknown Port").append(portName).toString());
+    }
+  }
+
+  public void setEndpointAddress(QName portName, String address)
+    throws ServiceException
+  {
+    setEndpointAddress(portName.getLocalPart(), address);
+  }
+}

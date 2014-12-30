@@ -60,52 +60,38 @@ public class ProvisioningController {
 		ResponseBean responseBean = null;
 
 		try {
-			
-			
 			//invoke the config component
-			//System.out.println("invoke the config component");
 			javaLinkEngine = new ConfigEngine(configurations);
 			NEConfig neConfig = (NEConfig) javaLinkEngine.invoke();
 			
 			//invoke the parse component
-			//System.out.println("invoke the parse component");
 			javaLinkEngine = new ParseEngine(mmlString);
 			RequestBean requestBean = (RequestBean) javaLinkEngine.invoke();
 			requestBean.setNeConfig(neConfig);
 			
 			//invoke the validation component
-			//System.out.println("invoke the validation component");
 			javaLinkEngine = new ValidatorEngine(requestBean);
 			javaLinkEngine.invoke();
 			
 			//performing the actual provisioning communication
-			//System.out.println("performing the actual provisioning communication");
 			javaLinkService = new ProvisioningService();
-			
-			//responseBean = (ResponseBean) javaLinkService.processRequest(requestBean);
-			
-			//System.out.println("response getting");
 			responseBean = (ResponseBean)javaLinkService.processRequest(requestBean);
-			//Object obj = (ResponseBean)javaLinkService.processRequest(requestBean);
+			
+			/*Object obj = javaLinkService.processRequest(requestBean);
+			
 			
 			//invoke response modifier for modifying the raw response
-			//javaLinkEngine = new ResponseModifierEngine(obj,requestBean.getOperation());
-			//responseBean = (ResponseBean) javaLinkEngine.invoke();
+			javaLinkEngine = new ResponseModifierEngine(obj,
+					requestBean.getOperation());
+			responseBean = (ResponseBean) javaLinkEngine.invoke();*/
 		} catch (JavaLinkException e) {
 			logger.error(e.getMessage());
-			responseBean = new ResponseBean();
-			responseBean.setErrorCode(Integer.toString(e.getErrorCode()));
-			responseBean.setErrorDesc(e.getErrorDescription());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
 			logger.error(e.getMessage());
-			responseBean = new ResponseBean();
-			responseBean.setErrorCode(Integer.toString(9099));
-			responseBean.setErrorDesc("JavaLink Error");
-			
 		} finally {
-			if(responseBean == null){
+			if (responseBean == null) {
 				responseBean = new ResponseBean();
 			}
 		}

@@ -1,0 +1,163 @@
+package my.com.ngc.genico.mrbt.ws;
+
+import java.io.IOException;
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import javax.xml.namespace.QName;
+import org.apache.axis.AxisFault;
+import org.apache.axis.description.ElementDesc;
+import org.apache.axis.description.TypeDesc;
+import org.apache.axis.encoding.Deserializer;
+import org.apache.axis.encoding.SerializationContext;
+import org.apache.axis.encoding.Serializer;
+import org.apache.axis.encoding.ser.BeanDeserializer;
+import org.apache.axis.encoding.ser.BeanSerializer;
+
+public class ProvisionFaultDetail extends AxisFault implements Serializable {
+	private String errorCode;
+	private String errorKey;
+	private String[] errorParams;
+	private Object __equalsCalc = null;
+
+	private boolean __hashCodeCalc = false;
+
+	private static TypeDesc typeDesc = new TypeDesc(ProvisionFaultDetail.class,
+			true);
+
+	public ProvisionFaultDetail() {
+	}
+
+	public ProvisionFaultDetail(String errorCode, String errorKey,
+			String[] errorParams) {
+		this.errorCode = errorCode;
+		this.errorKey = errorKey;
+		this.errorParams = errorParams;
+	}
+
+	public String getErrorCode() {
+		return this.errorCode;
+	}
+
+	public void setErrorCode(String errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public String getErrorKey() {
+		return this.errorKey;
+	}
+
+	public void setErrorKey(String errorKey) {
+		this.errorKey = errorKey;
+	}
+
+	public String[] getErrorParams() {
+		return this.errorParams;
+	}
+
+	public void setErrorParams(String[] errorParams) {
+		this.errorParams = errorParams;
+	}
+
+	public synchronized boolean equals(Object obj) {
+		if (!(obj instanceof ProvisionFaultDetail))
+			return false;
+		ProvisionFaultDetail other = (ProvisionFaultDetail) obj;
+		if (obj == null)
+			return false;
+		if (this == obj)
+			return true;
+		if (this.__equalsCalc != null) {
+			return this.__equalsCalc == obj;
+		}
+		this.__equalsCalc = obj;
+
+		boolean _equals = ((this.errorCode == null) && (other.getErrorCode() == null))
+				|| ((this.errorCode != null)
+						&& (this.errorCode.equals(other.getErrorCode())) && (((this.errorKey == null) && (other
+						.getErrorKey() == null)) || ((this.errorKey != null)
+						&& (this.errorKey.equals(other.getErrorKey())) && (((this.errorParams == null) && (other
+						.getErrorParams() == null)) || ((this.errorParams != null) && (Arrays
+						.equals(this.errorParams, other.getErrorParams())))))));
+
+		this.__equalsCalc = null;
+		return _equals;
+	}
+
+	public synchronized int hashCode() {
+		if (this.__hashCodeCalc) {
+			return 0;
+		}
+		this.__hashCodeCalc = true;
+		int _hashCode = 1;
+		if (getErrorCode() != null) {
+			_hashCode += getErrorCode().hashCode();
+		}
+		if (getErrorKey() != null) {
+			_hashCode += getErrorKey().hashCode();
+		}
+		if (getErrorParams() != null) {
+			for (int i = 0; i < Array.getLength(getErrorParams()); i++) {
+				Object obj = Array.get(getErrorParams(), i);
+				if ((obj != null) && (!obj.getClass().isArray())) {
+					_hashCode += obj.hashCode();
+				}
+			}
+		}
+		this.__hashCodeCalc = false;
+		return _hashCode;
+	}
+
+	public static TypeDesc getTypeDesc() {
+		return typeDesc;
+	}
+
+	public static Serializer getSerializer(String mechType, Class _javaType,
+			QName _xmlType) {
+		return new BeanSerializer(_javaType, _xmlType, typeDesc);
+	}
+
+	public static Deserializer getDeserializer(String mechType,
+			Class _javaType, QName _xmlType) {
+		return new BeanDeserializer(_javaType, _xmlType, typeDesc);
+	}
+
+	public void writeDetails(QName qname, SerializationContext context)
+			throws IOException {
+		context.serialize(qname, null, this);
+	}
+
+	static {
+		typeDesc.setXmlType(new QName("http://ws.mrbt.genico.ngc.com.my",
+				"ProvisionFaultDetail"));
+		ElementDesc elemField = new ElementDesc();
+		elemField.setFieldName("errorCode");
+		elemField.setXmlName(new QName("http://ws.mrbt.genico.ngc.com.my",
+				"errorCode"));
+		elemField.setXmlType(new QName("http://www.w3.org/2001/XMLSchema",
+				"string"));
+		elemField.setMinOccurs(0);
+		elemField.setNillable(true);
+		typeDesc.addFieldDesc(elemField);
+		elemField = new ElementDesc();
+		elemField.setFieldName("errorKey");
+		elemField.setXmlName(new QName("http://ws.mrbt.genico.ngc.com.my",
+				"errorKey"));
+		elemField.setXmlType(new QName("http://www.w3.org/2001/XMLSchema",
+				"string"));
+		elemField.setMinOccurs(0);
+		elemField.setNillable(true);
+		typeDesc.addFieldDesc(elemField);
+		elemField = new ElementDesc();
+		elemField.setFieldName("errorParams");
+		elemField.setXmlName(new QName("http://ws.mrbt.genico.ngc.com.my",
+				"errorParams"));
+		elemField.setXmlType(new QName("http://www.w3.org/2001/XMLSchema",
+				"string"));
+		elemField.setMinOccurs(0);
+		elemField.setNillable(true);
+		elemField.setItemQName(new QName("http://ws.mrbt.genico.ngc.com.my",
+				"string"));
+		typeDesc.addFieldDesc(elemField);
+	}
+}

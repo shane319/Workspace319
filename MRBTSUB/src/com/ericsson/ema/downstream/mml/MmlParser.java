@@ -93,6 +93,8 @@ public class MmlParser extends DefaultHandler {
 			requestBean.setTransactionId(tempVal);
 		} else if (qName.equalsIgnoreCase(MmlConstant.HLR_RESP)) {
 			requestBean.setHlrResponse(tempVal);
+		} else if (qName.equalsIgnoreCase(MmlConstant.NEW_MSISDN)) {
+			requestBean.setNewMsisdn(tempVal);
 		} else {
 			// System.out.println("Input XML " + qName + " tag not matched");
 		}

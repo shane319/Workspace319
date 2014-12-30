@@ -26,6 +26,8 @@ package com.ericsson.ema.downstream.engine;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 import com.ericsson.ema.downstream.config.NEConfig;
 import com.ericsson.ema.downstream.exception.ConfigException;
@@ -49,7 +51,28 @@ public class ConfigEngine implements JavaLinkEngine {
 			throw new ConfigException("Server URL is null");
 		}
 		neConfig.setEndpointURL(new URL(configurations[0]));
-
+		
+		if (ValidatorUtil.isNull(configurations[1])) {
+			throw new ConfigException("Time out is null");
+		}
+		neConfig.setTimeOut(Integer.parseInt(configurations[1]));
+		
+		if (ValidatorUtil.isNull(configurations[2])) {
+			throw new ConfigException("Server Change Msisdn URL is null");
+		}
+		neConfig.setChangeMsisdnURL(new URL(configurations[2]));
+		
+		if (ValidatorUtil.isNull(configurations[3])) {
+			throw new ConfigException("Username is null");
+		}
+		neConfig.setUsername(configurations[3]);
+		
+		if (ValidatorUtil.isNull(configurations[4])) {
+			throw new ConfigException("Password is null");
+		}
+		neConfig.setPassword(configurations[4]);
 		return neConfig;
 	}
+
+	
 }

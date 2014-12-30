@@ -1,0 +1,66 @@
+package my.com.ngc.genico.mrbt.ws;
+
+import java.rmi.RemoteException;
+import javax.xml.rpc.ServiceException;
+import javax.xml.rpc.Stub;
+
+public class MRBTProvisionServiceProxy implements MRBTProvisionService_PortType {
+	private String _endpoint = null;
+	private MRBTProvisionService_PortType mRBTProvisionService_PortType = null;
+
+	public MRBTProvisionServiceProxy() {
+		_initMRBTProvisionServiceProxy();
+	}
+
+	public MRBTProvisionServiceProxy(String endpoint) {
+		this._endpoint = endpoint;
+		_initMRBTProvisionServiceProxy();
+	}
+
+	private void _initMRBTProvisionServiceProxy() {
+		try {
+			this.mRBTProvisionService_PortType = new MRBTProvisionService_ServiceLocator()
+					.getMRBTProvisionServiceHttpPort();
+			if (this.mRBTProvisionService_PortType != null)
+				if (this._endpoint != null)
+					((Stub) this.mRBTProvisionService_PortType)._setProperty(
+							"javax.xml.rpc.service.endpoint.address",
+							this._endpoint);
+				else
+					this._endpoint = ((String) ((Stub) this.mRBTProvisionService_PortType)
+							._getProperty("javax.xml.rpc.service.endpoint.address"));
+		} catch (ServiceException serviceException) {
+		}
+	}
+
+	public String getEndpoint() {
+		return this._endpoint;
+	}
+
+	public void setEndpoint(String endpoint) {
+		this._endpoint = endpoint;
+		if (this.mRBTProvisionService_PortType != null)
+			((Stub) this.mRBTProvisionService_PortType)._setProperty(
+					"javax.xml.rpc.service.endpoint.address", this._endpoint);
+	}
+
+	public MRBTProvisionService_PortType getMRBTProvisionService_PortType() {
+		if (this.mRBTProvisionService_PortType == null)
+			_initMRBTProvisionServiceProxy();
+		return this.mRBTProvisionService_PortType;
+	}
+
+	public void deactivateSubscriber(int in0, String in1)
+			throws RemoteException, ProvisionFaultDetail {
+		if (this.mRBTProvisionService_PortType == null)
+			_initMRBTProvisionServiceProxy();
+		this.mRBTProvisionService_PortType.deactivateSubscriber(in0, in1);
+	}
+
+	public void activateSubscriber(int in0, String in1) throws RemoteException,
+			ProvisionFaultDetail {
+		if (this.mRBTProvisionService_PortType == null)
+			_initMRBTProvisionServiceProxy();
+		this.mRBTProvisionService_PortType.activateSubscriber(in0, in1);
+	}
+}
